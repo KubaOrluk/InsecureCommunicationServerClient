@@ -15,6 +15,7 @@ import java.net.Socket;
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity {
     Thread Thread1 = null;
+    EditText etIP, etPort;
     TextView tvMessages;
     EditText etMessage;
     Button btnSend;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        etIP = findViewById(R.id.etIP);
+        etPort = findViewById(R.id.etPort);
         tvMessages = findViewById(R.id.tvMessages);
         etMessage = findViewById(R.id.etMessage);
         btnSend = findViewById(R.id.btnSend);
@@ -32,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tvMessages.setText("");
-                SERVER_IP = "10.0.2.2";
-                SERVER_PORT = 5000;
+                SERVER_IP = etIP.getText().toString().trim();
+                SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
                 Thread1 = new Thread(new Thread1());
                 Thread1.start();
             }
