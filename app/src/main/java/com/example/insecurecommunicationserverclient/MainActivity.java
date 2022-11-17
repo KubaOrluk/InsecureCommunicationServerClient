@@ -1,5 +1,6 @@
 package com.example.insecurecommunicationserverclient;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -10,7 +11,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.Socket;
+
+import javax.net.ssl.SSLSocket;
 
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity {
@@ -21,9 +25,26 @@ public class MainActivity extends AppCompatActivity {
     Button btnSend;
     String SERVER_IP, user;
     int SERVER_PORT;
+
+    private static final String TLS_VERSION = "TLSv1.2";
+    private static final int SERVER_COUNT = 1;
+    private static final String TRUST_STORE_NAME = "servercert.p12";
+    private static final char[] TRUST_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
+    private static final String KEY_STORE_NAME = "servercert.p12";
+    private static final char[] KEY_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
+
+    private static Context context;
+
+    public static Context getAppContext() {
+        return MainActivity.context;
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MainActivity.context = getApplication().getApplicationContext();
         setContentView(R.layout.activity_main);
         etIP = findViewById(R.id.etIP);
         etPort = findViewById(R.id.etPort);
@@ -71,11 +92,15 @@ public class MainActivity extends AppCompatActivity {
     private BufferedReader input;
     class Thread1 implements Runnable {
         public void run() {
-            Socket socket;
+            TLSClient client = new TLSClient();
+            SSLSocket sslSocket = null;
             try {
-                socket = new Socket(SERVER_IP, SERVER_PORT);
-                output = new PrintWriter(socket.getOutputStream());
-                input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                sslSocket = client.request(
+                        InetAddress.getByName(SERVER_IP), SERVER_PORT, TLS_VERSION,
+                        TRUST_STORE_NAME, TRUST_STORE_PWD, KEY_STORE_NAME, KEY_STORE_PWD);
+
+                input = new BufferedReader(new InputStreamReader(sslSocket.getInputStream()));
+                output = new PrintWriter(sslSocket.getOutputStream());
                 output.write(user + "\n");
                 output.flush();
                 runOnUiThread(new Runnable() {
@@ -86,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
                 });
                 new Thread(new Thread2()).start();
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
