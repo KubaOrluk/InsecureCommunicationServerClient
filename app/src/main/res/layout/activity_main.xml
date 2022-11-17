@@ -5,36 +5,49 @@
     android:layout_height = "match_parent"
     android:layout_margin = "16dp"
     tools:context = ".MainActivity">
+
     <EditText
-        android:id = "@+id/etIP"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:hint = "IP-Address"
-        android:inputType = "text" />
+        android:id="@+id/etIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IP-Address"
+        android:inputType="text"
+        android:text="10.0.2.2" />
+
     <EditText
-        android:id = "@+id/etPort"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_below = "@+id/etIP"
-        android:hint = "Port No"
-        android:inputType = "number" />
+        android:id="@+id/etPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etIP"
+        android:hint="Port No"
+        android:inputType="number"
+        android:text="5000" />
 
     <EditText
         android:id="@+id/userName"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_below = "@+id/etPort"
-        android:hint = "Username"
-        android:inputType = "text" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPort"
+        android:hint="Username"
+        android:inputType="text"
+        android:text="testUser" />
+
+    <EditText
+        android:id="@+id/encryptionPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        android:hint="Encryption password"
+        android:inputType="text"
+        android:text="5trongP@55" />
 
     <Button
-        android:id = "@+id/btnConnect"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_below = "@+id/userName"
-        android:layout_gravity = "center"
-        android:layout_marginTop = "16dp"
-        android:text = "Connect To Server" />
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/encryptionPass"
+        android:layout_gravity="center"
+        android:text="Connect To Server" />
 
     <TextView
         android:id="@+id/tvMessages"

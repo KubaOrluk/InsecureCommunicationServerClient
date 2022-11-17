@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,7 +21,7 @@ import javax.net.ssl.SSLSocket;
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity {
     Thread Thread1 = null;
-    EditText etIP, etPort, userName;
+    EditText etIP, etPort, userName, encryptionPass;
     TextView tvMessages;
     EditText etMessage;
     Button btnSend;
@@ -33,22 +35,24 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_STORE_NAME = "servercert.p12";
     private static final char[] KEY_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
 
+    EncryptData encryptData;
+
     private static Context context;
 
     public static Context getAppContext() {
         return MainActivity.context;
     }
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MainActivity.context = getApplication().getApplicationContext();
+        encryptData = new EncryptData();
         setContentView(R.layout.activity_main);
         etIP = findViewById(R.id.etIP);
         etPort = findViewById(R.id.etPort);
         userName = findViewById(R.id.userName);
+        encryptionPass = findViewById(R.id.encryptionPass);
         tvMessages = findViewById(R.id.tvMessages);
         etMessage = findViewById(R.id.etMessage);
         btnSend = findViewById(R.id.btnSend);
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Toast.makeText(MainActivity.context, EncryptData.getSha256Hash(encryptionPass.getText().toString().trim()), Toast.LENGTH_SHORT).show();
                 tvMessages.setText("");
                 SERVER_IP = etIP.getText().toString().trim();
                 SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 etIP.setVisibility(View.GONE);
                 etPort.setVisibility(View.GONE);
                 userName.setVisibility(View.GONE);
+                encryptionPass.setVisibility(View.GONE);
                 btnConnect.setVisibility(View.GONE);
                 tvMessages.setVisibility(View.VISIBLE);
                 etMessage.setVisibility(View.VISIBLE);
@@ -94,14 +100,16 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             TLSClient client = new TLSClient();
             SSLSocket sslSocket = null;
+            encryptData.setSecretKeyFromString(encryptionPass.getText().toString().trim());
             try {
                 sslSocket = client.request(
                         InetAddress.getByName(SERVER_IP), SERVER_PORT, TLS_VERSION,
                         TRUST_STORE_NAME, TRUST_STORE_PWD, KEY_STORE_NAME, KEY_STORE_PWD);
 
                 input = new BufferedReader(new InputStreamReader(sslSocket.getInputStream()));
-                output = new PrintWriter(sslSocket.getOutputStream());
-                output.write(user + "\n");
+                output = new PrintWriter(sslSocket.getOutputStream(), true);
+                output.write(encryptData.encryptToSend(user )+ "\n");
+                //output.write(user + "\n");
                 output.flush();
                 runOnUiThread(new Runnable() {
                     @Override
@@ -122,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             while (true) {
                 try {
-                    final String message = input.readLine();
+                    final String message = encryptData.decryptFromRec(input.readLine());
                     if (message != null) {
                         runOnUiThread(new Runnable() {
                             @Override
@@ -148,8 +156,7 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         public void run() {
-            output.write(message);
-            output.write("\n");
+            output.write(encryptData.encryptToSend(message)+ "\n");
             output.flush();
             runOnUiThread(new Runnable() {
                 @Override
