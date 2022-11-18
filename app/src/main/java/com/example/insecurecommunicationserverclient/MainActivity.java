@@ -3,6 +3,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private static final char[] TRUST_STORE_PWD = "abc123".toCharArray();
     private static final String KEY_STORE_NAME = "clientcert.p12";
     //private static final char[] KEY_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
-    private static final char[] KEY_STORE_PWD = "321cba".toCharArray();
+    private static final char[] KEY_STORE_PWD = "abc123".toCharArray();
 
 
     EncryptData encryptData;
@@ -65,26 +68,52 @@ public class MainActivity extends AppCompatActivity {
         tvMessages.setVisibility(View.GONE);
 
         Button btnConnect = findViewById(R.id.btnConnect);
+
+        //detect if any text field is empty
+        TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")) {
+                    btnConnect.setVisibility(View.GONE);
+                } else {
+                    btnConnect.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        };
+
+        etIP.addTextChangedListener(textWatcher);
+        etPort.addTextChangedListener(textWatcher);
+        userName.addTextChangedListener(textWatcher);
+        encryptionPass.addTextChangedListener(textWatcher);
+
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.context, EncryptData.getSha256Hash(encryptionPass.getText().toString().trim()), Toast.LENGTH_SHORT).show();
                 tvMessages.setText("");
+
                 SERVER_IP = etIP.getText().toString().trim();
                 SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
                 user = userName.getText().toString().trim();
 
-                etIP.setVisibility(View.GONE);
-                etPort.setVisibility(View.GONE);
-                userName.setVisibility(View.GONE);
-                encryptionPass.setVisibility(View.GONE);
-                btnConnect.setVisibility(View.GONE);
-                tvMessages.setVisibility(View.VISIBLE);
-                etMessage.setVisibility(View.VISIBLE);
-                btnSend.setVisibility(View.VISIBLE);
-
-                Thread1 = new Thread(new Thread1());
-                Thread1.start();
+                if(SERVER_IP != null){
+                    etIP.setVisibility(View.GONE);
+                    etPort.setVisibility(View.GONE);
+                    userName.setVisibility(View.GONE);
+                    encryptionPass.setVisibility(View.GONE);
+                    btnConnect.setVisibility(View.GONE);
+                    tvMessages.setVisibility(View.VISIBLE);
+                    etMessage.setVisibility(View.VISIBLE);
+                    btnSend.setVisibility(View.VISIBLE);
+                    Thread1 = new Thread(new Thread1());
+                    Thread1.start();
+                }
             }
         });
         btnSend.setOnClickListener(new View.OnClickListener() {
