@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         MainActivity.context = getApplication().getApplicationContext();
         encryptData = new EncryptData();
+
         setContentView(R.layout.activity_main);
         etIP = findViewById(R.id.etIP);
         etPort = findViewById(R.id.etPort);
@@ -94,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
     private PrintWriter output;
     private BufferedReader input;
     class Thread1 implements Runnable {

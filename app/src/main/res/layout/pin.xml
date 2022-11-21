@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#D0285FBD">
+
+    <EditText
+        android:id="@+id/editPin1"
+        android:layout_width="58dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#244AAA"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editPin2"
+        android:layout_width="58dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/editPin1"
+        app:layout_constraintStart_toEndOf="@+id/editPin1"
+        app:layout_constraintTop_toTopOf="@+id/editPin1"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editPin3"
+        android:layout_width="58dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/editPin2"
+        app:layout_constraintStart_toEndOf="@+id/editPin2"
+        app:layout_constraintTop_toTopOf="@+id/editPin2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editPin4"
+        android:layout_width="58dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/editPin3"
+        app:layout_constraintStart_toEndOf="@+id/editPin3"
+        app:layout_constraintTop_toTopOf="@+id/editPin3"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textViewPin"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Enter PIN:"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
