@@ -3,6 +3,10 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     String SERVER_IP, user;
     int SERVER_PORT;
 
+    TextView editPin1, editPin2, editPin3, editPin4;
+
     private static final String TLS_VERSION = "TLSv1.2";
     private static final int SERVER_COUNT = 1;
     private static final String TRUST_STORE_NAME = "servercert.p12";
@@ -49,6 +55,121 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.context = getApplication().getApplicationContext();
         encryptData = new EncryptData();
 
+        setContentView(R.layout.pin);
+        editPin1 = findViewById(R.id.editPin1);
+        editPin2 = findViewById(R.id.editPin2);
+        editPin3 = findViewById(R.id.editPin3);
+        editPin4 = findViewById(R.id.editPin4);
+
+        editPin1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin1.length() == 1) {
+                    editPin1.clearFocus();
+                    editPin2.requestFocus();
+                    editPin2.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editPin2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin2.length() == 1) {
+                    editPin2.clearFocus();
+                    editPin3.requestFocus();
+                    editPin3.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editPin3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin3.length() == 1) {
+                    editPin3.clearFocus();
+                    editPin4.requestFocus();
+                    editPin4.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editPin4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin4.length() == 1) {
+                    editPin4.clearFocus();
+                    if(verifyPin())
+                        initMainView();
+                    else
+                        clearPin();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+    }
+
+    protected Boolean verifyPin() {
+        StringBuilder pinSb = new StringBuilder();
+        pinSb.append(editPin1.getText());
+        pinSb.append(editPin2.getText());
+        pinSb.append(editPin3.getText());
+        pinSb.append(editPin4.getText());
+        String pinSbStr = pinSb.toString();
+        if(pinSbStr.equals("1234")) { //TODO: check Pin
+            return true;
+        }
+        return false;
+    }
+
+    protected void clearPin() {
+        editPin1.setText("");
+        editPin2.setText("");
+        editPin3.setText("");
+        editPin4.setText("");
+
+        editPin4.clearFocus();
+        editPin1.requestFocus();
+        editPin1.setCursorVisible(true);
+    }
+
+    protected void initMainView() {
         setContentView(R.layout.activity_main);
         etIP = findViewById(R.id.etIP);
         etPort = findViewById(R.id.etPort);

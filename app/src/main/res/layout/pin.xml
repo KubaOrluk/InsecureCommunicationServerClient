@@ -15,6 +15,7 @@
         android:backgroundTint="#244AAA"
         android:ems="10"
         android:inputType="number"
+        android:maxLength="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -25,12 +26,13 @@
         android:layout_height="80dp"
         android:layout_marginLeft="30dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="number"
+        android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="@+id/editPin1"
         app:layout_constraintStart_toEndOf="@+id/editPin1"
         app:layout_constraintTop_toTopOf="@+id/editPin1"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editPin3"
@@ -39,6 +41,7 @@
         android:layout_marginLeft="30dp"
         android:ems="10"
         android:inputType="number"
+        android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="@+id/editPin2"
         app:layout_constraintStart_toEndOf="@+id/editPin2"
         app:layout_constraintTop_toTopOf="@+id/editPin2"
@@ -50,12 +53,13 @@
         android:layout_height="80dp"
         android:layout_marginLeft="30dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="number"
+        android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="@+id/editPin3"
         app:layout_constraintStart_toEndOf="@+id/editPin3"
         app:layout_constraintTop_toTopOf="@+id/editPin3"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textViewPin"
