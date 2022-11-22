@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSend;
     Button btnDisconn;
     Button btnConnect;
+    Button btnEditPin;
     String SERVER_IP, user;
     int SERVER_PORT;
     SSLSocket sslSocket;
@@ -188,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
         etMessage = findViewById(R.id.etMessage);
         btnSend = findViewById(R.id.btnSend);
         btnDisconn = findViewById(R.id.btnDisconnect);
+        btnEditPin = findViewById(R.id.btnEditPin);
 
         btnDisconn.setVisibility(View.GONE);
         etMessage.setVisibility(View.GONE);
@@ -256,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
             userName.setVisibility(View.GONE);
             encryptionPass.setVisibility(View.GONE);
             btnConnect.setVisibility(View.GONE);
+            btnEditPin.setVisibility(View.GONE);
             btnDisconn.setVisibility(View.VISIBLE);
             tvMessages.setVisibility(View.VISIBLE);
             etMessage.setVisibility(View.VISIBLE);
