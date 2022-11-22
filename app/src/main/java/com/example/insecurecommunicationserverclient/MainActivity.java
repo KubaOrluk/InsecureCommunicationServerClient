@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,12 +26,18 @@ import javax.net.ssl.SSLSocket;
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity {
     Thread Thread1 = null;
+    Thread thr2 = null;
     EditText etIP, etPort, userName, encryptionPass;
     TextView tvMessages;
     EditText etMessage;
     Button btnSend;
+    Button btnDisconn;
+    Button btnConnect;
     String SERVER_IP, user;
     int SERVER_PORT;
+    SSLSocket sslSocket;
+
+    TextView editPin1, editPin2, editPin3, editPin4;
 
     private static final String TLS_VERSION = "TLSv1.2";
     private static final int SERVER_COUNT = 1;
@@ -54,6 +62,122 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         MainActivity.context = getApplication().getApplicationContext();
         encryptData = new EncryptData();
+
+        setContentView(R.layout.pin);
+        editPin1 = findViewById(R.id.editPin1);
+        editPin2 = findViewById(R.id.editPin2);
+        editPin3 = findViewById(R.id.editPin3);
+        editPin4 = findViewById(R.id.editPin4);
+
+        editPin1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin1.length() == 1) {
+                    editPin1.clearFocus();
+                    editPin2.requestFocus();
+                    editPin2.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editPin2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin2.length() == 1) {
+                    editPin2.clearFocus();
+                    editPin3.requestFocus();
+                    editPin3.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editPin3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin3.length() == 1) {
+                    editPin3.clearFocus();
+                    editPin4.requestFocus();
+                    editPin4.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editPin4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editPin4.length() == 1) {
+                    editPin4.clearFocus();
+                    if(verifyPin())
+                        initMainView();
+                    else
+                        clearPin();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+    }
+
+    protected Boolean verifyPin() {
+        StringBuilder pinSb = new StringBuilder();
+        pinSb.append(editPin1.getText());
+        pinSb.append(editPin2.getText());
+        pinSb.append(editPin3.getText());
+        pinSb.append(editPin4.getText());
+        String pinSbStr = pinSb.toString();
+        if(pinSbStr.equals("1234")) { //TODO: check Pin
+            return true;
+        }
+        return false;
+    }
+
+    protected void clearPin() {
+        editPin1.setText("");
+        editPin2.setText("");
+        editPin3.setText("");
+        editPin4.setText("");
+
+        editPin4.clearFocus();
+        editPin1.requestFocus();
+        editPin1.setCursorVisible(true);
+    }
+
+    protected void initMainView() {
         setContentView(R.layout.activity_main);
         etIP = findViewById(R.id.etIP);
         etPort = findViewById(R.id.etPort);
@@ -62,12 +186,15 @@ public class MainActivity extends AppCompatActivity {
         tvMessages = findViewById(R.id.tvMessages);
         etMessage = findViewById(R.id.etMessage);
         btnSend = findViewById(R.id.btnSend);
+        btnDisconn = findViewById(R.id.btnDisconnect);
 
+        btnDisconn.setVisibility(View.GONE);
         etMessage.setVisibility(View.GONE);
         btnSend.setVisibility(View.GONE);
         tvMessages.setVisibility(View.GONE);
 
-        Button btnConnect = findViewById(R.id.btnConnect);
+        btnConnect = findViewById(R.id.btnConnect);
+        //if (etIP==null) Log.i("MainActivity", "null");
 
         //detect if any text field is empty
         TextWatcher textWatcher = new TextWatcher() {
@@ -96,24 +223,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.context, EncryptData.getSha256Hash(encryptionPass.getText().toString().trim()), Toast.LENGTH_SHORT).show();
-                tvMessages.setText("");
-
-                SERVER_IP = etIP.getText().toString().trim();
-                SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
-                user = userName.getText().toString().trim();
-
-                if(SERVER_IP != null){
-                    etIP.setVisibility(View.GONE);
-                    etPort.setVisibility(View.GONE);
-                    userName.setVisibility(View.GONE);
-                    encryptionPass.setVisibility(View.GONE);
-                    btnConnect.setVisibility(View.GONE);
-                    tvMessages.setVisibility(View.VISIBLE);
-                    etMessage.setVisibility(View.VISIBLE);
-                    btnSend.setVisibility(View.VISIBLE);
-                    Thread1 = new Thread(new Thread1());
-                    Thread1.start();
-                }
+                changeToConectedState();
             }
         });
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -125,13 +235,69 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        btnDisconn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeToDisconectedState();
+            }
+        });
     }
+
+    private void changeToConectedState() {
+        tvMessages.setText("");
+        SERVER_IP = etIP.getText().toString().trim();
+        SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
+        user = userName.getText().toString().trim();
+
+      if(SERVER_IP != null){
+        etIP.setVisibility(View.GONE);
+        etPort.setVisibility(View.GONE);
+        userName.setVisibility(View.GONE);
+        encryptionPass.setVisibility(View.GONE);
+        btnConnect.setVisibility(View.GONE);
+        btnDisconn.setVisibility(View.VISIBLE);
+        tvMessages.setVisibility(View.VISIBLE);
+        etMessage.setVisibility(View.VISIBLE);
+        btnSend.setVisibility(View.VISIBLE);
+      }
+      
+
+        Thread1 = new Thread(new Thread1());
+        Thread1.start();
+    }
+
+    private void changeToDisconectedState() {
+        thr2.interrupt();
+        try {
+            sslSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        tvMessages.setText("");
+
+        etIP.setVisibility(View.VISIBLE);
+        etPort.setVisibility(View.VISIBLE);
+        userName.setVisibility(View.VISIBLE);
+        encryptionPass.setVisibility(View.VISIBLE);
+        btnConnect.setVisibility(View.VISIBLE);
+
+        btnDisconn.setVisibility(View.GONE);
+        tvMessages.setVisibility(View.GONE);
+        etMessage.setVisibility(View.GONE);
+        btnSend.setVisibility(View.GONE);
+
+
+    }
+
+
+
     private PrintWriter output;
     private BufferedReader input;
     class Thread1 implements Runnable {
         public void run() {
             TLSClient client = new TLSClient();
-            SSLSocket sslSocket = null;
+            sslSocket = null;
             encryptData.setSecretKeyFromString(encryptionPass.getText().toString().trim());
             try {
                 sslSocket = client.request(
@@ -149,7 +315,8 @@ public class MainActivity extends AppCompatActivity {
                         tvMessages.setText("Connected, IP: " + SERVER_IP + ", Port: " + String.valueOf(SERVER_PORT) + " \nYour username is: " + String.valueOf(user) + "\n");
                     }
                 });
-                new Thread(new Thread2()).start();
+                thr2 = new Thread(new Thread2());
+                thr2.start();
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (Exception e) {
@@ -161,6 +328,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             while (true) {
+                if (Thread.interrupted()) {
+                    return;
+                }
                 try {
                     final String message = encryptData.decryptFromRec(input.readLine());
                     if (message != null) {
@@ -171,9 +341,16 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                     } else {
-                        Thread1 = new Thread(new Thread1());
-                        Thread1.start();
-                        return;
+                        if(Thread.interrupted())
+                            return;
+                        else {
+                            //Propably disconnected from server, do a disconnect
+                            //TODO: verify if working
+                            changeToDisconectedState();
+                            return;
+                        }
+                        //Thread1 = new Thread(new Thread1());
+                        //Thread1.start();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
