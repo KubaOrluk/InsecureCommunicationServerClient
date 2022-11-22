@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvMessages;
     EditText etMessage;
     Button btnSend;
+    Button btnDisconn;
     String SERVER_IP, user;
     int SERVER_PORT;
 
@@ -178,12 +179,15 @@ public class MainActivity extends AppCompatActivity {
         tvMessages = findViewById(R.id.tvMessages);
         etMessage = findViewById(R.id.etMessage);
         btnSend = findViewById(R.id.btnSend);
+        btnDisconn = findViewById(R.id.btnDisconnect);
 
-        etMessage.setVisibility(View.GONE);
+        btnDisconn.setVisibility(View.GONE);
+        tvMessages.setVisibility(View.GONE);
         btnSend.setVisibility(View.GONE);
         tvMessages.setVisibility(View.GONE);
 
         Button btnConnect = findViewById(R.id.btnConnect);
+        //if (etIP==null) Log.i("MainActivity", "null");
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -198,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 userName.setVisibility(View.GONE);
                 encryptionPass.setVisibility(View.GONE);
                 btnConnect.setVisibility(View.GONE);
+                btnDisconn.setVisibility(View.VISIBLE);
                 tvMessages.setVisibility(View.VISIBLE);
                 etMessage.setVisibility(View.VISIBLE);
                 btnSend.setVisibility(View.VISIBLE);
