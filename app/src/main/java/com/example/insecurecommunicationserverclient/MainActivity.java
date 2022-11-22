@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,9 +42,12 @@ public class MainActivity extends AppCompatActivity {
     private static final String TLS_VERSION = "TLSv1.2";
     private static final int SERVER_COUNT = 1;
     private static final String TRUST_STORE_NAME = "servercert.p12";
-    private static final char[] TRUST_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
-    private static final String KEY_STORE_NAME = "servercert.p12";
-    private static final char[] KEY_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
+    //private static final char[] TRUST_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
+    private static final char[] TRUST_STORE_PWD = "abc123".toCharArray();
+    private static final String KEY_STORE_NAME = "clientcert.p12";
+    //private static final char[] KEY_STORE_PWD = new char[] {'a', 'b', 'c', '1', '2', '3'};
+    private static final char[] KEY_STORE_PWD = "abc123".toCharArray();
+
 
     EncryptData encryptData;
 
@@ -191,6 +195,30 @@ public class MainActivity extends AppCompatActivity {
 
         btnConnect = findViewById(R.id.btnConnect);
         //if (etIP==null) Log.i("MainActivity", "null");
+
+        //detect if any text field is empty
+        TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")) {
+                    btnConnect.setVisibility(View.GONE);
+                } else {
+                    btnConnect.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        };
+
+        etIP.addTextChangedListener(textWatcher);
+        etPort.addTextChangedListener(textWatcher);
+        userName.addTextChangedListener(textWatcher);
+        encryptionPass.addTextChangedListener(textWatcher);
+
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -221,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
         SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
         user = userName.getText().toString().trim();
 
+      if(SERVER_IP != null){
         etIP.setVisibility(View.GONE);
         etPort.setVisibility(View.GONE);
         userName.setVisibility(View.GONE);
@@ -230,6 +259,8 @@ public class MainActivity extends AppCompatActivity {
         tvMessages.setVisibility(View.VISIBLE);
         etMessage.setVisibility(View.VISIBLE);
         btnSend.setVisibility(View.VISIBLE);
+      }
+      
 
         Thread1 = new Thread(new Thread1());
         Thread1.start();
