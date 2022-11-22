@@ -20,6 +20,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketException;
 
 import javax.net.ssl.SSLSocket;
 
@@ -249,18 +250,17 @@ public class MainActivity extends AppCompatActivity {
         SERVER_PORT = Integer.parseInt(etPort.getText().toString().trim());
         user = userName.getText().toString().trim();
 
-      if(SERVER_IP != null){
-        etIP.setVisibility(View.GONE);
-        etPort.setVisibility(View.GONE);
-        userName.setVisibility(View.GONE);
-        encryptionPass.setVisibility(View.GONE);
-        btnConnect.setVisibility(View.GONE);
-        btnDisconn.setVisibility(View.VISIBLE);
-        tvMessages.setVisibility(View.VISIBLE);
-        etMessage.setVisibility(View.VISIBLE);
-        btnSend.setVisibility(View.VISIBLE);
-      }
-      
+        if(SERVER_IP != null){
+            etIP.setVisibility(View.GONE);
+            etPort.setVisibility(View.GONE);
+            userName.setVisibility(View.GONE);
+            encryptionPass.setVisibility(View.GONE);
+            btnConnect.setVisibility(View.GONE);
+            btnDisconn.setVisibility(View.VISIBLE);
+            tvMessages.setVisibility(View.VISIBLE);
+            etMessage.setVisibility(View.VISIBLE);
+            btnSend.setVisibility(View.VISIBLE);
+        }
 
         Thread1 = new Thread(new Thread1());
         Thread1.start();
@@ -268,11 +268,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void changeToDisconectedState() {
         thr2.interrupt();
-        try {
-            sslSocket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        new Thread(new Thread4Disconnect()).start();
 
         tvMessages.setText("");
 
@@ -352,6 +348,8 @@ public class MainActivity extends AppCompatActivity {
                         //Thread1 = new Thread(new Thread1());
                         //Thread1.start();
                     }
+                } catch (SocketException e) {
+                    return;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -374,6 +372,18 @@ public class MainActivity extends AppCompatActivity {
                             etMessage.setText("");
                 }
             });
+        }
+    }
+    class Thread4Disconnect implements Runnable {
+        Thread4Disconnect() { }
+
+        @Override
+        public void run() {
+            try {
+                sslSocket.close();
+            } catch (Exception e) {
+                return;
+            }
         }
     }
 }
