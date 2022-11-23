@@ -35,11 +35,15 @@ public class MainActivity extends AppCompatActivity {
     Button btnDisconn;
     Button btnConnect;
     Button btnEditPin;
+    Button btnConfirmChange;
     String SERVER_IP, user;
     int SERVER_PORT;
     SSLSocket sslSocket;
 
     TextView editPin1, editPin2, editPin3, editPin4;
+
+    TextView editChangePin1,editChangePin2,editChangePin3,editChangePin4;
+    TextView editRetypePin1,editRetypePin2,editRetypePin3,editRetypePin4;
 
     private static final String TLS_VERSION = "TLSv1.2";
     private static final int SERVER_COUNT = 1;
@@ -244,6 +248,192 @@ public class MainActivity extends AppCompatActivity {
                 changeToDisconectedState();
             }
         });
+        btnEditPin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditPinState();
+            }
+        });
+    }
+    protected void EditPinState(){//////////////////////////////////////////////////////////////////////
+        setContentView(R.layout.changepin);
+        editChangePin1 = findViewById(R.id.editChangePin1);
+        editChangePin2 = findViewById(R.id.editChangePin2);
+        editChangePin3 = findViewById(R.id.editChangePin3);
+        editChangePin4 = findViewById(R.id.editChangePin4);
+        editRetypePin1 = findViewById(R.id.editRetypePin1);
+        editRetypePin2 = findViewById(R.id.editRetypePin2);
+        editRetypePin3 = findViewById(R.id.editRetypePin3);
+        editRetypePin4 = findViewById(R.id.editRetypePin4);
+        btnConfirmChange = findViewById(R.id.btnConfirmChange);
+
+        editChangePin1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editChangePin1.length() == 1) {
+                    editChangePin1.clearFocus();
+                    editChangePin2.requestFocus();
+                    editChangePin2.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editChangePin2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editChangePin2.length() == 1) {
+                    editChangePin2.clearFocus();
+                    editChangePin3.requestFocus();
+                    editChangePin3.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editChangePin3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editChangePin3.length() == 1) {
+                    editChangePin3.clearFocus();
+                    editChangePin4.requestFocus();
+                    editChangePin4.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editChangePin4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editChangePin4.length() == 1) {
+                    editChangePin4.clearFocus();
+                    editRetypePin1.requestFocus();
+                    editRetypePin1.setCursorVisible(true);
+
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        editRetypePin1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editRetypePin1.length() == 1) {
+                    editRetypePin1.clearFocus();
+                    editRetypePin2.requestFocus();
+                    editRetypePin2.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        editRetypePin2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editRetypePin2.length() == 1) {
+                    editRetypePin2.clearFocus();
+                    editRetypePin3.requestFocus();
+                    editRetypePin3.setCursorVisible(true);
+                }
+            }
+
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        editRetypePin3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editRetypePin3.length() == 1) {
+                    editRetypePin3.clearFocus();
+                    editRetypePin4.requestFocus();
+                    editRetypePin4.setCursorVisible(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        editRetypePin4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editRetypePin4.length() == 1) {
+                    editRetypePin4.clearFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        btnConfirmChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initMainView();
+            }
+        });
+
     }
 
     private void changeToConectedState() {
