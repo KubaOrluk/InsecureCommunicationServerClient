@@ -1,6 +1,7 @@
 package com.example.insecurecommunicationserverclient;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     EncryptData encryptData;
+    SharedPreferences sp = null;
+
 
     private static Context context;
 
@@ -68,12 +71,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         MainActivity.context = getApplication().getApplicationContext();
         encryptData = new EncryptData();
+        initSharedPref();
 
         setContentView(R.layout.pin);
         editPin1 = findViewById(R.id.editPin1);
         editPin2 = findViewById(R.id.editPin2);
         editPin3 = findViewById(R.id.editPin3);
         editPin4 = findViewById(R.id.editPin4);
+
+        if(!checkIsPinExist())
+            initMainView();
 
         editPin1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -144,10 +151,13 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (editPin4.length() == 1) {
                     editPin4.clearFocus();
-                    if(verifyPin())
+                    if(verifyPin()) {
                         initMainView();
-                    else
+                    }
+                    else {
+                        Toast.makeText(MainActivity.context, "Wrong PIN!", Toast.LENGTH_LONG).show();
                         clearPin();
+                    }
                 }
             }
 
@@ -166,10 +176,37 @@ public class MainActivity extends AppCompatActivity {
         pinSb.append(editPin3.getText());
         pinSb.append(editPin4.getText());
         String pinSbStr = pinSb.toString();
-        if(pinSbStr.equals("1234")) { //TODO: check Pin
+
+        String pinDb = sp.getString("pin", "");
+        if(pinDb.length()<4)
             return true;
-        }
+        if(pinSbStr.length()<4)
+            return false;
+        if(pinSbStr.equals(pinDb))
+            return true;
         return false;
+    }
+
+    protected void initSharedPref() {
+        sp = getSharedPreferences("InsCommServCli", Context.MODE_PRIVATE);
+    }
+
+    protected Boolean changePin(String newPin, String newPin2) {
+        if(!newPin.equals(newPin2)) {
+            return false;
+        }
+        SharedPreferences.Editor spe = sp.edit();
+        spe.putString("pin", newPin);
+        spe.commit();
+        return true;
+    }
+
+    protected Boolean checkIsPinExist() {
+        String pin = sp.getString("pin", "");
+        if(pin.length()==4)
+            return true;
+        else
+            return false;
     }
 
     protected void clearPin() {
@@ -255,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    protected void EditPinState(){//////////////////////////////////////////////////////////////////////
+    protected void EditPinState(){
         setContentView(R.layout.changepin);
         editChangePin1 = findViewById(R.id.editChangePin1);
         editChangePin2 = findViewById(R.id.editChangePin2);
@@ -430,7 +467,26 @@ public class MainActivity extends AppCompatActivity {
         btnConfirmChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initMainView();
+                StringBuilder pinSb1 = new StringBuilder();
+                pinSb1.append(editChangePin1.getText());
+                pinSb1.append(editChangePin2.getText());
+                pinSb1.append(editChangePin3.getText());
+                pinSb1.append(editChangePin4.getText());
+                String pinSb1Str = pinSb1.toString();
+
+                StringBuilder pinSb2 = new StringBuilder();
+                pinSb2.append(editRetypePin1.getText());
+                pinSb2.append(editRetypePin2.getText());
+                pinSb2.append(editRetypePin3.getText());
+                pinSb2.append(editRetypePin4.getText());
+                String pinSb2Str = pinSb2.toString();
+
+                if(changePin(pinSb1Str, pinSb2Str)) {
+                    Toast.makeText(MainActivity.context, "PIN Changed succesfully!", Toast.LENGTH_LONG).show();
+                    initMainView();
+                } else {
+                    Toast.makeText(MainActivity.context, "PIN NOT Changed!", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
