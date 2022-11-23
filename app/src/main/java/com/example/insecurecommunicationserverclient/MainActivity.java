@@ -482,7 +482,7 @@ public class MainActivity extends AppCompatActivity {
                 String pinSb2Str = pinSb2.toString();
 
                 if(changePin(pinSb1Str, pinSb2Str)) {
-                    Toast.makeText(MainActivity.context, "PIN Changed succesfully!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.context, "PIN Changed successfully!", Toast.LENGTH_LONG).show();
                     initMainView();
                 } else {
                     Toast.makeText(MainActivity.context, "PIN NOT Changed!", Toast.LENGTH_LONG).show();
