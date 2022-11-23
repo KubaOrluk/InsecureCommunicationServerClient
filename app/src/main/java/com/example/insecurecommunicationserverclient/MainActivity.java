@@ -521,7 +521,8 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 try {
-                    final String message = encryptData.decryptFromRec(input.readLine());
+                    String inp = input.readLine();
+                    final String message = encryptData.decryptFromRec(inp);
                     if (message != null) {
                         runOnUiThread(new Runnable() {
                             @Override
