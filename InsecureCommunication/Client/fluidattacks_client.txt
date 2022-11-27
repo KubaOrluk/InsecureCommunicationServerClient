@@ -1,0 +1,167 @@
+finding,kind,what,where,cwe,stream,title,description,snippet,method
+F234,lines,MediConv-client/app/src/main/java/com/github/pgleska/adapters/MessagesAdapter.java,77,209,skims,234. Technical information leak - Stacktrace,error stacktrace can be printed in MediConv-client/MediConv-client/app/src/main/java/com/github/pgleska/adapters/MessagesAdapter.java,"
+   67 |         try {
+   68 |             if (messageDTO.getAuthorId() == viewModel.getUser().getId()) {
+   69 |                 content = CryptographyUtils.decrypt(""RSA"", messageDTO.getSharedKeyEncryptedWithAuthorPKey(),
+   70 |                         viewModel.getPrivateKey())
+   71 |             } else {
+   72 |                 content = CryptographyUtils.decrypt(""AES"", messageDTO.getSharedKeyEncryptedWithReceiverPKey(),
+   73 |                         viewModel.getPrivateKey())
+   74 |             }
+   75 |         } catch (NoSuchPaddingException | NoSuchAlgorithmException |InvalidAlgorithmParameterException |
+   76 |                 InvalidKeyException | BadPaddingException | IllegalBlockSizeException e) {
+>  77 |             e.printStackTrace()
+   78 |         }
+   79 |         holder.message.setText(content)
+   80 |     }
+   81 |
+   82 |     @Override
+   83 |     public int getItemCount() {
+   84 |         return messages.size()
+   85 |     }
+   86 |
+   87 |     public void updateMessage(List<MessageDTO> messages) {
+      ^ Col 0
+",java.java_info_leak_stacktrace
+F234,lines,MediConv-client/app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java,113,209,skims,234. Technical information leak - Stacktrace,error stacktrace can be printed in MediConv-client/MediConv-client/app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java,"
+  103 |                 String content = messageET.getText().toString()
+  104 |                 MessageDTO messageDTO = new MessageDTO()
+  105 |                 messageDTO.setReceiverId(viewModel.getOtherUser().getId())
+  106 |                 messageDTO.setContent(""!@#!@!!#!@#%@%"")
+  107 |                 messageDTO.setSharedKeyEncryptedWithAuthorPKey(encryptMessage(content,
+  108 |                         CryptographyUtils.restorePublicKey(viewModel.getUser().getPublicKey())))
+  109 |                 messageDTO.setSharedKeyEncryptedWithReceiverPKey(encryptMessage(content,
+  110 |                         CryptographyUtils.restorePublicKey(viewModel.getOtherUser().getPublicKey())))
+  111 |                 sendMessage(messageDTO)
+  112 |             } catch (NoSuchAlgorithmException | InvalidAlgorithmParameterException | NoSuchPaddingException | IllegalBloc
+> 113 |                 e.printStackTrace()
+  114 |             }
+  115 |         })
+  116 |
+  117 |         recyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+  118 |             @Override
+  119 |             public void onLayoutChange(View view, int i, int i1, int i2, int i3, int i4, int i5, int i6, int i7) {
+  120 |                 if(!messages.isEmpty()) {
+  121 |                     recyclerView.smoothScrollToPosition(messages.size() - 1)
+  122 |                 }
+  123 |             }
+      ^ Col 0
+",java.java_info_leak_stacktrace
+F234,lines,MediConv-client/app/src/main/java/com/github/pgleska/ui/register/PinFragment.java,96,209,skims,234. Technical information leak - Stacktrace,error stacktrace can be printed in MediConv-client/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/PinFragment.java,"
+   86 |     private void registerFlow() {
+   87 |         try {
+   88 |             Map<String, String> keys = CryptographyUtils.generatePair()
+   89 |             SecretKey pinCodeKey = CryptographyUtils.createPinCodeKey(pinET.getText().toString())
+   90 |             viewModel.setSK(pinCodeKey)
+   91 |             String publicKey = keys.get(""public"")
+   92 |             String privateKey = keys.get(""private"")
+   93 |             sendPublicKey(publicKey)
+   94 |             sendPrivateKey(privateKey, pinCodeKey)
+   95 |         } catch (NoSuchAlgorithmException | InvalidKeySpecException | NoSuchPaddingException | IllegalBlockSizeException
+>  96 |             e.printStackTrace()
+   97 |         }
+   98 |     }
+   99 |
+  100 |     private void sendPublicKey(String publicKey) {
+  101 |         UserDTO userDTO = new UserDTO()
+  102 |         userDTO.setPublicKey(publicKey)
+  103 |         Call<ResponseDTO<UserDTO>> call = userInterface.sendPublicKey(viewModel.getToken(), userDTO)
+  104 |         call.enqueue(new Callback<ResponseDTO<UserDTO>>() {
+  105 |             @Override
+  106 |             public void onResponse(Call<ResponseDTO<UserDTO>> call, Response<ResponseDTO<UserDTO>> response) {
+      ^ Col 0
+",java.java_info_leak_stacktrace
+F234,lines,MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java,145,209,skims,234. Technical information leak - Stacktrace,error stacktrace can be printed in MediConv-client/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java,"
+  135 |                     }
+  136 |                 }
+  137 |
+  138 |                 @Override
+  139 |                 public void onFailure(Call<TokenDTO> call, Throwable t) {
+  140 |
+  141 |                 }
+  142 |             })
+  143 |
+  144 |         } catch (NoSuchAlgorithmException e) {
+> 145 |             e.printStackTrace()
+  146 |         }
+  147 |     }
+  148 |
+  149 |     private void sendPublicKey(String publicKey) {
+  150 |         UserDTO userDTO = new UserDTO()
+  151 |         userDTO.setPublicKey(publicKey)
+  152 |         Call<ResponseDTO<UserDTO>> call = userInterface.sendPublicKey(viewModel.getToken(), userDTO)
+  153 |         call.enqueue(new Callback<ResponseDTO<UserDTO>>() {
+  154 |             @Override
+  155 |             public void onResponse(Call<ResponseDTO<UserDTO>> call, Response<ResponseDTO<UserDTO>> response) {
+      ^ Col 0
+",java.java_info_leak_stacktrace
+F403,lines,MediConv-client/app/src/main/AndroidManifest.xml,7,319,skims,403. Insecure service configuration - usesCleartextTraffic,Ensure your application doesn't have android:usesCleartextTraffic set to true, in order to prevent the reading of not encrypted resources."
+ in MediConv-client/MediConv-client/app/src/main/AndroidManifest.xml","
+   1 | <?xml version=""1.0"" encoding=""utf-8""?>
+   2 | <manifest xmlns:android=""http://schemas.android.com/apk/res/android""
+   3 |     package=""com.github.pgleska"">
+   4 |
+   5 |     <uses-permission android:name=""android.permission.INTERNET"" />
+   6 |
+>  7 |     <application
+   8 |         android:allowBackup=""true""
+   9 |         android:icon=""@mipmap/ic_launcher""
+  10 |         android:label=""@string/app_name""
+  11 |         android:roundIcon=""@mipmap/ic_launcher_round""
+  12 |         android:supportsRtl=""true""
+  13 |         android:theme=""@style/Theme.MediConv""
+  14 |         android:usesCleartextTraffic=""true"">
+  15 |
+  16 |         <activity
+  17 |             android:name="".MainActivity""
+  18 |             android:exported=""true""
+  19 |             android:label=""@string/app_name""
+  20 |             android:theme=""@style/Theme.MediConv.NoActionBar"">
+  21 |             <intent-filter>
+     ^ Col 0
+",conf_files.xml_insecure_configuration
+F117,lines,MediConv-client/gradle/wrapper/gradle-wrapper.jar,0,377,skims,117. Unverifiable files,Unverifiable file in MediConv-client/MediConv-client/gradle/wrapper/gradle-wrapper.jar,"
+     1 | PK
+     2 | A META-INF/PK
+     3 | Amďż˝>=@?META-INF/MANIFEST.MFďż˝Mďż˝ďż˝LK-.ďż˝
+     4 | K-*ďż˝ďż˝ĎłR0ďż˝3ďż˝ďż˝ďż˝ďż˝-ďż˝Iďż˝Mďż˝+I,
+     5 | ďż˝dďż˝ďż˝Z)ďż˝%ďż˝ďż˝*ďż˝%ďż˝ďż˝rďż˝rPK
+     6 | Aorg/PK
+     7 | A
+     8 | org/gradle/PK
+     9 | Aorg/gradle/wrapper/PK
+    10 | Aďż˝%Ó¦ďż˝/org/gradle/wrapper/BootstrapMainStarter$1.classďż˝Rďż˝nďż˝@=Ó¸u1ďż˝ďż˝ďż˝Eyďż˝@_Iikďż˝6ďż˝Uďż˝@.,Ruďż˝ďż˝Lďż˝!ďż˝ďż˝Gďż˝ ďż˝6 ďż˝
+    11 | ďż˝ďż˝kďż˝ŢŚďż˝=eďż˝d/cďż˝ďż˝ďż˝ÎĄďż˝e<Mznďż˝
+    12 | ďż˝ďż˝1ďż˝
+    13 | gďż˝(ďż˝ďż˝qnďż˝Qďż˝ďż˝4Sďż˝'+G#eďż˝yďż˝
+    14 | ďż˝ďż˝Tjďż˝uďż˝:eďż˝ďż˝t(@&ďż˝9ďż˝ďż˝V|!?ďż˝Hďż˝ďż˝Kďż˝ďż˝ďż˝$Ę¤ďż˝G]gďż˝ďż˝wďż˝ďż˝(3ďż˝V`ďż˝_(ďż˝9ďż˝Tďż˝Gďż˝ďż˝ďż˝&ďż˝D
+    15 | l\&ďż˝dďż˝ďż˝ďż˝dyAÖ©rďż˝<ďż˝ďż˝0ďż˝#lďż˝ďż˝(ďż˝>iďż˝0ďż˝cďż˝
+    16 | ďż˝=<ďż˝Oďż˝ďż˝ďż˝
+    17 | bďż˝ďż˝+7.Pďż˝ďż˝ďż˝mďż˝B%ďż˝ďż˝ďż˝ďż˝Mďż˝
+    18 | ďż˝-ďż˝wĹşlďż˝6i<ďż˝Z2ďż˝93ďż˝ďż˝ďż˝ďż˝ďż˝#ďż˝ďż˝Ň±wďż˝Úşl
+    19 | hďż˝ďż˝ďż˝ďż˝ďż˝ďż˝ďż˝x8Fďż˝ďż˝Eďż˝ďż˝v~ďż˝Ä—ďż˝9ďż˝P%pďż˝w8ďż˝.ďż˝R3ďż˝Sďż˝ Ńµďż˝ďż˝Acďż˝+jďż˝gďż˝QEoN Szďż˝ďż˝Bďż˝zďż˝ďż˝ďż˝ďż˝ďż˝ďż˝jďż˝\ďż˝:ďż˝ďż˝ďż˝ďż˝ďż˝
+    20 | zQ^ďż˝ďż˝oPK
+    21 | Ai,ďż˝$
+       ^ Col 0
+",generic.unverifiable_files
+F055,lines,MediConv-client/app/src/main/AndroidManifest.xml,4,530,skims,055. Insecure service configuration - ADB Backups,application.android:allowBackup enabled,"
+   1 | <manifest package=""com.github.pgleska"" xmlns:android=""http://schemas.android.com/apk/res/android"">
+   2 |  <uses-permission android:name=""android.permission.INTERNET"">
+   3 |  </uses-permission>
+>  4 |  <application android:allowbackup=""true"" android:icon=""@mipmap/ic_launcher"" android:label=""@string/app_name"" android:rou
+     | ndicon=""@mipmap/ic_launcher_round"" android:supportsrtl=""true"" android:theme=""@style/Theme.MediConv"" android:usescleartex
+     | ttraffic=""true"">
+   5 |   <activity android:exported=""true"" android:label=""@string/app_name"" android:name="".MainActivity"" android:theme=""@style/
+     | Theme.MediConv.NoActionBar"">
+   6 |    <intent-filter>
+   7 |     <action android:name=""android.intent.action.MAIN"">
+   8 |     </action>
+   9 |     <category android:name=""android.intent.category.LAUNCHER"">
+  10 |     </category>
+  11 |    </intent-filter>
+  12 |   </activity>
+  13 |  </application>
+  14 | </manifest>
+     ^ Col 0
+",android.apk_backups_enabled
+"

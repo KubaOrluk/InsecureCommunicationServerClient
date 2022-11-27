@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Report</title>
+  <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.0.js'></script>
+
+  <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <link href="https://dl.betterscan.io/assets/css/reportstyle.css" rel="stylesheet">
+
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+var data =
+[
+    {
+        "hash": "54eaab10cd9229287a8a2e26ea01e819",
+        "description": "Cryptographic keys should not be kept in the source code. The source code can be widely shared\nin an enterprise environment, and is certainly shared in open source. To be managed safely,\npasswords and secret keys should be stored in separate configuration files or keystores.\n",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 79
+    },
+    {
+        "hash": "bea8a5a18aa290f0aa3ddbefe3fbf121",
+        "description": "Unused import 'com.github.pgleska.dtos.PrivateKeyDTO'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/PinFragment.java",
+        "line": 19
+    },
+    {
+        "hash": "63e4bab26958c55ff5ac77975be90c3a",
+        "description": "Unused import 'com.github.pgleska.dtos.MessageDTO'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/adapters/UsersAdapter.java",
+        "line": 14
+    },
+    {
+        "hash": "00b04c006c1b1487bbd4716f09d9c65a",
+        "description": "Consider simply returning the value vs storing it in local variable 'originalKey'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 80
+    },
+    {
+        "hash": "aef72f45bfdeeb83830a535d1eb78f3b",
+        "description": "Package name contains upper case characters",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/viewModels/UniversalViewModel.java",
+        "line": 1
+    },
+    {
+        "hash": "68df9953655815686fb6bdcf7b9fa5ab",
+        "description": "A switch statement does not contain a break",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/MainActivity.java",
+        "line": 67
+    },
+    {
+        "hash": "f27e2484490e3aa0ab57c62e06d39edf",
+        "description": "Consider simply returning the value vs storing it in local variable 'key'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 36
+    },
+    {
+        "hash": "917fca487cd6c580b6904301ce6c931b",
+        "description": "Unused import 'java.util.Base64'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/adapters/MessagesAdapter.java",
+        "line": 20
+    },
+    {
+        "hash": "a262b5c2646f78a9f0a86bc90864995c",
+        "description": "Avoid unused private fields such as 'messageInterface'.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 49
+    },
+    {
+        "hash": "eb3f54603f70b2b75dffc45d07044e8a",
+        "description": "Perhaps 'layoutManager' could be replaced by a local variable.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 45
+    },
+    {
+        "hash": "950f2338bc79fc3ce1120809d3302bda",
+        "description": "An empty statement (semicolon) not part of a loop",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/login/LoginFragment.java",
+        "line": 62
+    },
+    {
+        "hash": "7feb3a37fc9e725a6254fde3d7378ab2",
+        "description": "Unused import 'java.security.InvalidKeyException'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 28
+    },
+    {
+        "hash": "93e6b062d66dbc6fcf0fb3e4304d6b2b",
+        "description": "Use one line for each declaration, it enhances code readability.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/adapters/UsersAdapter.java",
+        "line": 63
+    },
+    {
+        "hash": "0aefee3051132066d927da9dd2abb4f8",
+        "description": "Unused import 'org.junit.Assert.*'",
+        "severity": "Warning",
+        "file": "app/src/androidTest/java/com/github/pgleska/ExampleInstrumentedTest.java",
+        "line": 11
+    },
+    {
+        "hash": "651526cae4a07caf1f7b878a94625684",
+        "description": "Avoid unused method parameters such as 'secretKey'.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java",
+        "line": 132
+    },
+    {
+        "hash": "8e03349915a7cf2b6eb1aa3f585222d0",
+        "description": "Unused import 'javax.crypto.BadPaddingException'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 38
+    },
+    {
+        "hash": "31b246b0c62abb6cf127a183b88db479",
+        "description": "Unused import 'javax.crypto.SecretKeyFactory'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 27
+    },
+    {
+        "hash": "06d36ca63d2cbb01e8e263416c001606",
+        "description": "Unused import 'com.github.pgleska.dtos.ResponseDTO'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/login/LoginFragment.java",
+        "line": 20
+    },
+    {
+        "hash": "6e2e5a94d93c22934ac69cbf9352b478",
+        "description": "All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 31
+    },
+    {
+        "hash": "17c1224e42c9464b3a59b94c56fd52a2",
+        "description": "Unused import 'androidx.navigation.Navigation'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/PinFragment.java",
+        "line": 14
+    },
+    {
+        "hash": "f8dcc583f803f86b35b0d4cab6b208db",
+        "description": "Unused import 'java.time.LocalDateTime'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/dtos/MessageDTO.java",
+        "line": 3
+    },
+    {
+        "hash": "fca337caf3c3124f3e1aad9edda87e81",
+        "description": "Perhaps 'binding' could be replaced by a local variable.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/MainActivity.java",
+        "line": 25
+    },
+    {
+        "hash": "7f5c2ca4b9688cbf649dbdcefb9ff0a3",
+        "description": "Perhaps 'recyclerView' could be replaced by a local variable.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 44
+    },
+    {
+        "hash": "c27117a2fb438b63c5a59b6d854ad4a9",
+        "description": "Unused import 'com.google.android.material.snackbar.Snackbar'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/MainActivity.java",
+        "line": 10
+    },
+    {
+        "hash": "4a42b38d9ccdf303e4a64b9204cf4408",
+        "description": "Unused import 'android.util.Log'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 6
+    },
+    {
+        "hash": "a969584e48de0a80782a643efa72f621",
+        "description": "The JUnit 4 test method name 'addition_isCorrect' doesn't match '[a-z][a-zA-Z0-9]*'",
+        "severity": "Warning",
+        "file": "app/src/test/java/com/github/pgleska/ExampleUnitTest.java",
+        "line": 14
+    },
+    {
+        "hash": "a6aea0d5d3aea3c4ca26fc1298d3b099",
+        "description": "Unused import 'android.text.Editable'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java",
+        "line": 5
+    },
+    {
+        "hash": "5f13f9118c98ea256232fb15d5aa1556",
+        "description": "Unused import 'java.security.spec.InvalidKeySpecException'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 34
+    },
+    {
+        "hash": "83bb49db6c23233ac79dcfe161fb9f0d",
+        "description": "A class which only has private constructors should be final",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/retrofit/RetrofitClient.java",
+        "line": 9
+    },
+    {
+        "hash": "8988f7d2e2675fb6f606b238f8eec5e6",
+        "description": "This statement should have braces",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 104
+    },
+    {
+        "hash": "1813e8b7aa13cc52328beace2bff4c74",
+        "description": "Unused import 'java.util.Map'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 36
+    },
+    {
+        "hash": "d59f7086c9f53f8896f0a1d472851a3a",
+        "description": "Unused import 'javax.crypto.NoSuchPaddingException'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 40
+    },
+    {
+        "hash": "3d3a681f555c0ea123e80115c439a448",
+        "description": "Unused import 'com.github.pgleska.cryptography.CryptographyUtils'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 18
+    },
+    {
+        "hash": "25ef55e6c135d85e8a9b39d320377c6b",
+        "description": "Unused import 'android.view.View'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/MainActivity.java",
+        "line": 6
+    },
+    {
+        "hash": "636b5b08094f03d71df7eb41152d1278",
+        "description": "Avoid unused method parameters such as 'privateKey'.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/PinFragment.java",
+        "line": 119
+    },
+    {
+        "hash": "e320d2335fe33bf3cc997f329b758ac3",
+        "description": "Unused import 'java.security.SecureRandom'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 12
+    },
+    {
+        "hash": "be95842655b9889b31f429ab1c4a8d36",
+        "description": "Unused import 'javax.crypto.IllegalBlockSizeException'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 39
+    },
+    {
+        "hash": "9d6b3b2794c99151005ee08db9864c70",
+        "description": "Perhaps 'users' could be replaced by a local variable.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 47
+    },
+    {
+        "hash": "2470f171b836b77122f32faaca84f28c",
+        "description": "Unused import 'java.nio.charset.StandardCharsets'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 3
+    },
+    {
+        "hash": "ac20b18f35008885e8db4dbc11de87ec",
+        "description": "Perhaps 'name' could be replaced by a local variable.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java",
+        "line": 61
+    },
+    {
+        "hash": "3a169b28f49d15e3a45de23a97d6f521",
+        "description": "Perhaps 'root' could be replaced by a local variable.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/PinFragment.java",
+        "line": 44
+    },
+    {
+        "hash": "c5425cd538aba8d9e3062af06d7d83ec",
+        "description": "Avoid unused private fields such as 'TAG'.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 37
+    },
+    {
+        "hash": "0105a720ccb88d56236f2053ed22f5e5",
+        "description": "Avoid unused method parameters such as 'key'.",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/dtos/ConversationDTO.java",
+        "line": 35
+    },
+    {
+        "hash": "4eb1e99bfb1d602b35a702d4e5a1d7e0",
+        "description": "Unused import 'javax.crypto.SecretKey'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java",
+        "line": 41
+    },
+    {
+        "hash": "d6d7239c22b00a34daa53a9eff3f21f2",
+        "description": "Document empty method body",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/ui/conversations/ConversationsFragment.java",
+        "line": 92
+    },
+    {
+        "hash": "00b12b6ef352e66293937a0057d934c7",
+        "description": "Unused import 'java.security.spec.AlgorithmParameterSpec'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 13
+    },
+    {
+        "hash": "1116ddf1929d3475d8a0161d84c7f018",
+        "description": "Singleton is not thread safe",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/retrofit/RetrofitClient.java",
+        "line": 15
+    },
+    {
+        "hash": "64c6b37a87135f005d291f401fb4ca4a",
+        "description": "Consider simply returning the value vs storing it in local variable 'nvh'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/adapters/UsersAdapter.java",
+        "line": 39
+    },
+    {
+        "hash": "2d0457d870fb8840e0f0a7e022791eab",
+        "description": "Unused import 'javax.crypto.spec.IvParameterSpec'",
+        "severity": "Warning",
+        "file": "app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java",
+        "line": 28
+    }
+]
+var sort_by = function(field, reverse, primer){
+
+   var key = primer ?
+       function(x) {return primer(x[field])} :
+       function(x) {return x[field]};
+
+   reverse = !reverse ? 1 : -1;
+
+   return function (a, b) {
+       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+     }
+}
+
+for(var i = 0; i < data.length; i++) {
+
+    if(data[i].risk=="Information")
+    {
+        data[i].risk_no=1;
+    }
+
+    if(data[i].risk=="Low")
+    {
+        data[i].risk_no=2;
+    }
+
+    if(data[i].risk=="Medium")
+    {
+        data[i].risk_no=3;
+    }
+
+    if(data[i].risk=="High")
+    {
+        data[i].risk_no=4;
+    }
+
+
+
+
+
+}
+
+data.sort(sort_by('risk_no', true, parseInt));
+
+
+
+for(var i = 0; i < data.length; i++) {
+$('#findings').append("<tbody><tr><th>File</th><td>"+data[i].file+"</td></tr>");
+$('#findings').append("<tr><th>Description</th><td>"+data[i].description+"</td></tr>");
+$('#findings').append("<tr><th>Severity</th><td>Warning</td></tr>");
+$('#findings').append("<tr><th>Line</th><td>"+data[i].line+"</td></tr></tbody></table>");
+$('#hr').append("<hr>");
+
+}
+
+
+});//]]>
+
+</script>
+
+
+</head>
+
+ <div class="container-fluid">
+
+
+
+
+<p style="margin-bottom: 25px;"><img src="https://dl.betterscan.io/wp-content/uploads/2022/05/logo-nobackground-164x32-1.png" style="position:relative; top:-40px;"></p>
+
+<div class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#overview" data-toggle="tab">Summary</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="overview">
+
+
+<div class="alert alert-info">
+    <b>Tags</b>:
+
+        Security Final Report
+
+
+</div>
+
+<section id="information">
+    <div class="box">
+        <h4>Report</h4>
+        <div class="box-content" style="padding: 0;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="border-top: 0;">Type</th>
+
+                         <td style="border-top: 0;">FILE</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+</section>
+<hr>
+
+    <section id="file">
+    <h4>File Details</h4>
+    <div class="box">
+        <div class="box-content" style="padding: 0;">
+            <table class="table">
+                <tbody><tr>
+                    <th style="border-top: 0;">File Name</th>
+                    <td style="border-top: 0;">report.html</td>
+                </tr>
+                <tr>
+                    <th>File Type</th>
+                    <td>data</td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+</section>
+
+
+
+  <div align="center"><h1>Scan Report</h1></div>
+
+
+<hr>
+  <h4>Code</h4>
+
+ <section id="findings1">
+    <div class="box">
+
+        <div id="findings" class="box-content" style="padding: 0;">
+        </div>
+    </div>
+</section>
+
+</div>
+
+</body>
+
+
+</html>
+
+

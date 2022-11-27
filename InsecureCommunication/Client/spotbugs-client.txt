@@ -1,0 +1,84 @@
+BUILD SUCCESSFUL in 12s
+18 actionable tasks: 1 executed, 17 up-to-date
+PS C:\Users\modef\StudioProjects\MediConv-client> ./gradlew :app:spotbugsDebug  
+
+> Task :app:spotbugsDebug
+M V EI: com.github.pgleska.databinding.FragmentHomeBinding.getRoot() may expose internal representation by returning FragmentHomeBinding.rootView  At FragmentHomeBinding.java:[line 33]
+H I Dm: Found reliance on default encoding in com.github.pgleska.cryptography.CryptographyUtils.encrypt(String, String, PublicKey): String.getBytes()  At CryptographyUtils.java:[line 44]
+H I Dm: Found reliance on default encoding in com.github.pgleska.cryptography.CryptographyUtils.decrypt(String, String, PrivateKey): new String(byte[])  At CryptographyUtils.java:[line 57]
+M V EI: com.github.pgleska.databinding.FragmentGalleryBinding.getRoot() may expose internal representation by returning FragmentGalleryBinding.rootView  At FragmentGalleryBinding.java:[line 34]      
+M V EI: com.github.pgleska.ui.gallery.GalleryViewModel.getText() may expose internal representation by returning GalleryViewModel.mText  At GalleryViewModel.java:[line 17]                            
+M V EI: com.github.pgleska.databinding.FragmentSlideshowBinding.getRoot() may expose internal representation by returning FragmentSlideshowBinding.rootView  At FragmentSlideshowBinding.java:[line 34]
+M V EI: com.github.pgleska.databinding.ContentMainBinding.getRoot() may expose internal representation by returning ContentMainBinding.rootView  At ContentMainBinding.java:[line 26]
+M V EI: com.github.pgleska.databinding.AppBarMainBinding.getRoot() may expose internal representation by returning AppBarMainBinding.rootView  At AppBarMainBinding.java:[line 33]
+M V EI: com.github.pgleska.ui.slideshow.SlideshowViewModel.getText() may expose internal representation by returning SlideshowViewModel.mText  At SlideshowViewModel.java:[line 17]                                
+M V EI: com.github.pgleska.dtos.ConversationDTO.getRecipient() may expose internal representation by returning ConversationDTO.recipient  At ConversationDTO.java:[line 10]                                        
+M V EI2: com.github.pgleska.dtos.ConversationDTO.setRecipient(UserDTO) may expose internal representation by storing an externally mutable object into ConversationDTO.recipient  At ConversationDTO.java:[line 14]
+L M LI: Incorrect lazy initialization of static field com.github.pgleska.retrofit.RetrofitClient.retrofit in com.github.pgleska.retrofit.RetrofitClient.getClient(String)  At RetrofitClient.java:[lines 15-19]
+M V EI: com.github.pgleska.ui.home.HomeViewModel.getText() may expose internal representation by returning HomeViewModel.mText  At HomeViewModel.java:[line 17]
+L B Nm: The field name com.github.pgleska.ui.profile.ProfileFragment.ButtonReturn doesn't start with a lower case letter  In ProfileFragment.java
+M V EI2: new com.github.pgleska.adapters.UsersAdapter(List, UniversalViewModel, View) may expose internal representation by storing an externally mutable object into UsersAdapter.users  At UsersAdapter.java:[line 28]             
+M V EI2: new com.github.pgleska.adapters.UsersAdapter(List, UniversalViewModel, View) may expose internal representation by storing an externally mutable object into UsersAdapter.universalViewModel  At UsersAdapter.java:[line 29]
+M V EI2: com.github.pgleska.adapters.UsersAdapter.update(List) may expose internal representation by storing an externally mutable object into UsersAdapter.users  At UsersAdapter.java:[line 58]                                    
+M D NP: Possible null pointer dereference in com.github.pgleska.ui.conversations.ConversationsFragment.initComponents() due to return value of called method  Method invoked at ConversationsFragment.java:[line 72]
+M V EI2: com.github.pgleska.adapters.MessagesAdapter.updateMessage(List) may expose internal representation by storing an externally mutable object into MessagesAdapter.messages  At MessagesAdapter.java:[line 88]
+M V EI2: new com.github.pgleska.adapters.MessagesAdapter(List, Context, UniversalViewModel) may expose internal representation by storing an externally mutable object into MessagesAdapter.messages  At MessagesAdapter.java:[line 36] 
+M V EI2: new com.github.pgleska.adapters.MessagesAdapter(List, Context, UniversalViewModel) may expose internal representation by storing an externally mutable object into MessagesAdapter.viewModel  At MessagesAdapter.java:[line 38]
+H C RC: Suspicious comparison of Integer references in com.github.pgleska.adapters.MessagesAdapter.getItemViewType(int)  At MessagesAdapter.java:[line 55]
+H C RC: Suspicious comparison of Integer references in com.github.pgleska.adapters.MessagesAdapter.onBindViewHolder(MessagesAdapter$MessageViewHolder, int)  At MessagesAdapter.java:[line 68]
+M D NP: Possible null pointer dereference in com.github.pgleska.ui.login.LoginFragment.initComponents() due to return value of called method  Method invoked at LoginFragment.java:[line 61]
+L B Nm: The field name com.github.pgleska.ui.login.LoginFragment.ButtonRegister doesn't start with a lower case letter  In LoginFragment.java                                               
+L B Nm: The field name com.github.pgleska.ui.login.LoginFragment.ButtonLogin doesn't start with a lower case letter  In LoginFragment.java                                                  
+M V EI: com.github.pgleska.databinding.ActivityMainBinding.getRoot() may expose internal representation by returning ActivityMainBinding.rootView  At ActivityMainBinding.java:[line 42]
+M D NP: Possible null pointer dereference in com.github.pgleska.ui.register.PinFragment.initComponents() due to return value of called method  Method invoked at PinFragment.java:[line 70]
+L B Nm: The field name com.github.pgleska.ui.register.PinFragment.ButtonRegister doesn't start with a lower case letter  In PinFragment.java
+L D NP: Possible null pointer dereference in com.github.pgleska.ui.conversations.MessagesFragment.lambda$initListeners$0(View) due to return value of called method  Dereferenced at MessagesFragment.java:[line 99]
+M D NP: Possible null pointer dereference in com.github.pgleska.ui.conversations.MessagesFragment.initComponents() due to return value of called method  Method invoked at MessagesFragment.java:[line 80]
+L P UPM: Private method com.github.pgleska.ui.conversations.MessagesFragment.encryptSharedKey(SecretKey, String) is never called  At MessagesFragment.java:[line 134]
+M D SF: Switch statement found in com.github.pgleska.MainActivity.onOptionsItemSelected(MenuItem) where one case falls through to the next case  At MainActivity.java:[lines 69-71]                  
+M D SF: Switch statement found in com.github.pgleska.MainActivity.onOptionsItemSelected(MenuItem) where default case is missing  At MainActivity.java:[lines 67-75]                                  
+M D NP: Possible null pointer dereference in com.github.pgleska.ui.register.RegisterFragment.initComponents() due to return value of called method  Method invoked at RegisterFragment.java:[line 76]
+L B Nm: The field name com.github.pgleska.ui.register.RegisterFragment.ButtonRegister doesn't start with a lower case letter  In RegisterFragment.java
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.ItemUserBinding.itemConversationName  At ItemUserBinding.java:[line 32]        
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.NavHeaderMainBinding.imageView  At NavHeaderMainBinding.java:[line 32]         
+L P SIC: The class com.github.pgleska.ui.register.PinFragment$1 could be refactored into a named _static_ inner class  At PinFragment.java:[line 104]
+M D UuF: Unused public or protected field: com.github.pgleska.adapters.UsersAdapter$ConversationViewHolder.date  In UsersAdapter.java
+M D UuF: Unused public or protected field: com.github.pgleska.adapters.UsersAdapter$ConversationViewHolder.lastMessage  In UsersAdapter.java
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.ItemMessageLeftBinding.chatMessage  At ItemMessageLeftBinding.java:[line 27]
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.NavHeaderMainBinding.textView  At NavHeaderMainBinding.java:[line 33]
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.ItemMessageRightBinding.chatMessage  At ItemMessageRightBinding.java:[line 27]
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.ItemUserBinding.itemConversation  At ItemUserBinding.java:[line 31]
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.FragmentMessagesBinding.chatInput  At FragmentMessagesBinding.java:[line 48]
+L P SIC: The class com.github.pgleska.ui.register.RegisterFragment$3 could be refactored into a named _static_ inner class  At RegisterFragment.java:[line 153]
+L D UrF: Unread public/protected field: com.github.pgleska.databinding.FragmentMessagesBinding.singleMessageHeader  At FragmentMessagesBinding.java:[line 51]
+L D UwF: ProfileFragment.binding not initialized in constructor and dereferenced in com.github.pgleska.ui.profile.ProfileFragment.initComponents()  At ProfileFragment.java:[line 40]
+The following classes needed for analysis were missing:
+  android.text.TextWatcher
+  android.view.View$OnLayoutChangeListener
+  android.content.ComponentCallbacks
+  android.view.View$OnCreateContextMenuListener
+  android.view.ViewGroup
+  android.app.Activity
+  android.view.LayoutInflater
+  android.os.Bundle
+  android.widget.RelativeLayout
+  android.widget.TextView
+  android.view.View
+  android.content.res.Resources
+  android.widget.LinearLayout
+  android.widget.EditText
+  android.widget.Button
+  android.os.IBinder
+  android.view.inputmethod.InputMethodManager
+  android.widget.Toast
+  android.util.Log
+  android.text.Editable
+  android.view.MenuInflater
+  android.view.MenuItem
+  android.view.View$OnClickListener
+  android.content.Context
+SpotBugs ended with exit code 3
+
+BUILD SUCCESSFUL in 13s
+18 actionable tasks: 2 executed, 16 up-to-date
+PS C:\Users\modef\StudioProjects\MediConv-client> 

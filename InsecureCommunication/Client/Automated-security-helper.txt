@@ -1,0 +1,1298 @@
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//cdk_report_result.txt
+#############################################
+
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//cdk_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//git_report_result.txt
+#############################################
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//git_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//grype_report_result.txt
+#############################################
+No vulnerabilities found
+[0;90m[0005][0m [0;33m WARN[0m found package with empty ID while adding to the catalog: Pkg(name="gradle-wrapper" version="" type="java-archive" id="")
+NAME            VERSION  TYPE         
+gradle-wrapper           java-archive  
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//grype_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//py_report_result.txt
+#############################################
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.11.0
+Run started:2022-11-24 14:31:11.271212
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 0
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//py_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//yaml_report_result.txt
+#############################################
+2022-11-24 14:37:07,841 [MainThread  ] [ERROR]  Cannot read file contents: ./app/build/intermediates/data_binding_base_class_log_artifact/debug/out/com.github.pgleska-binding_classes.json
+2022-11-24 14:37:07,886 [MainThread  ] [ERROR]  Cannot read file contents: ./app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json
+2022-11-24 14:37:07,862 [MainThread  ] [ERROR]  Cannot read file contents: ./app/build/intermediates/data_binding_base_class_log_artifact/debug/out/com.github.pgleska-binding_classes.json
+2022-11-24 14:37:07,943 [MainThread  ] [ERROR]  Cannot read file contents: ./app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json
+
+       _               _              
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V / 
+  \___|_| |_|\___|\___|_|\_\___/ \_/  
+                                      
+By bridgecrew.io | version: 2.2.92 
+
+terraform_plan scan results:
+
+Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 2
+
+Error parsing file com.github.pgleska-binding_classes.jsonֿ
+Error parsing file base_builder_log.jsonֿ
+
+------------------------------------------------------------
+./app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/apk/debug/output-metadata.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/data_binding_base_class_log_artifact/debug/out/com.github.pgleska-binding_classes.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| #<ArgumentError: invalid byte sequence in US-ASCII>[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| #<ArgumentError: invalid byte sequence in US-ASCII>[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_manifests/debug/output-metadata.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rCA.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rXC.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h720dp-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hdpi-v4.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldltr-v21.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-port.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v16.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v17.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v18.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v22.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v24.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v25.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v26.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v31.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w1240dp-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-v13.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v20.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v21.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-xlarge-v4.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/navigation_json/debug/navigation.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/packaged_manifests/debug/output-metadata.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/processed_res/debug/out/output-metadata.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./app/build/intermediates/signing_config_versions/debug/signing-config-versions.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-client//yaml_report_result.txt
+#############################################
+
+

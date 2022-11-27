@@ -1,0 +1,1584 @@
+==================================================================================
+
+HORUSEC ENDED THE ANALYSIS WITH STATUS OF "success" AND WITH THE FOLLOWING RESULTS:
+
+==================================================================================
+
+Analysis StartedAt: 2022-11-24 14:11:56
+Analysis FinishedAt: 2022-11-24 14:12:46
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 0
+Column: 0
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/packageDebugResources/merger.xml
+Code: 
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: f9c1f6299e6d4bd051ac691ab545957ea6e0da06d59b1f5032d3458afda447b4
+Details: (1/1) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 2
+Column: 233
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1.1.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 61ef00ef2076d354683e9d84d6958650d8953b2183393cbf05e7ce3a7901bf2f
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 42
+Column: 143
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: cee359d3af3a6eda29d211f20c3fce3d28847431c38795a5755191760be0b969
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 48
+Column: 126
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0/res/values-ro/values-ro.xml" qualifiers="ro"><string msgid="6277540029070332960" name="status_bar_
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: c12e5941a372c501b2941c3375e159fd06a8100279852355ffd32aec04a25f5f
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 148
+Column: 138
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0/res/values-uz/values-uz.xml" qualifiers="uz"><string msgid="6277540029070332960" name="status_bar_
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 436aa550364b8503eda4bbc1e0031beb314b18348fda4e362a7c36dc6ad9c25a
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 185
+Column: 155
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 7a6eedbe33842fc8afdf5153ea6de07f9f2a7cb6c8785e20b590e49591b5d080
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 205
+Column: 169
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: a7194bf7cc4c466b2ba1cb9a45ba46bbcc1e8b9b81bfcd8b5e18c6eb7af4722e
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 289
+Column: 159
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 639a193990cf4653f80b397240a09b355be56b7e472710aec10396948766dab0
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 292
+Column: 147
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 3c56d650c39f0c306fdd9fd80435cb76bba160ddb70b38ebf8130445a452e98f
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 299
+Column: 155
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 5132fe75e4a43047687193777630eacbeb55e1cb1356a6a7ef55731299ab11c5
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 301
+Column: 171
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 2549c04d1bb7b6bed19770426319f14a8f15185282b567b759e5a20003e4be02
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 304
+Column: 167
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 341d6d10989a70c80930c544a767c7a1b837c05ebfc1d91ba54529dff2c9b20f
+Details: (1/1) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 332
+Column: 155
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 7cbf769c8ac1c1d057023a881c445a54169f8237e5c2862bcee8aee0bbfd0908
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 342
+Column: 155
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 4$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 37537812a81acf73fc71f1c957557e7f86d47f92f51b58a0a58f0135358f3a30
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 348
+Column: 166
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: b3653be375efc8bc2cf2ed12804e2f88c0a775cfcca8e1b115f2edaffcf2654e
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 390
+Column: 131
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-v28/values-v28.xml" qualifiers="v28"><style name="Base.Theme.AppCompat" parent="Base.V2
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 310eb77cda775b4d8b982488b8596fb6da1c0cf553ace9d60621cfe45bee7224
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 396
+Column: 131
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-v26/values-v26.xml" qualifiers="v26"><style name="Base.Theme.AppCompat" parent="Base.V2
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 2a95d492e08e7568e6366e36b7c404dbba3c93a19efc7b4929cb39db7f55e033
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 405
+Column: 219
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-v21/values-v21.xml" qualifiers="v21"><style name="Base.TextAppearance.AppCompat" parent
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 7fd06d385fc78084502bf1c2e74dce3cda19a75f3130f7f21a1b196ce875dbe1
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 591
+Column: 131
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-in/values-in.xml" qualifiers="in"><string msgid="5976598919945601918" name="abc_action_
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: a55e772b169cdb54306dc39eb0919f90c5c40b27b53949904f7829f3d9289a45
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 2818
+Column: 143
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-uz/values-uz.xml" qualifiers="uz"><string msgid="5976598919945601918" name="abc_action_
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: c3592daa4d790df2fc99125b4742a4363fe6d5c781517d8a14a7b3f2f1760fd5
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 2826
+Column: 131
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-v25/values-v25.xml" qualifiers="v25"><style name="Platform.AppCompat" parent="Platform.
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 290f4ce49d0ed11b1bdb49a3ff22cfb8b56c629806c2cb4c2319b5e7af6f4ff1
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 2832
+Column: 132
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: /res/values-v24/values-v24.xml" qualifiers="v24"><style name="Base.TextAppearance.AppCompat.Widget.B
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: bb06ae4af43622265764869c2082e7544c60ad7df318e6a8f3cb7b63a3bd422b
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 2866
+Column: 131
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 1/res/values-th/values-th.xml" qualifiers="th"><string msgid="5976598919945601918" name="abc_action_
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 5977529a5fc38888ddeb8d2cd73cd564bba7eaac48daeff224e1749c3e2602d5
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 2913
+Column: 167
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 4$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: f4d8709aee904e14ae4f5bd3314a0867d071b8c1e841c7e50c0a5bc5344c4874
+Details: (1/1) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 4239
+Column: 161
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thum
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 5a9f2ec8a0729bd397cef5cf3da59a7100cd27d6551e9777a60dc53fc588444e
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 4571
+Column: 128
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 7.0/res/values/values.xml" qualifiers=""><attr format="reference" name="appBarLayoutStyle"/><attr fo
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: b196831292acd3ca516f30d23928bf355aacb365ad7e2d27bb9682b72ce994e7
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 10419
+Column: 4382
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 7.0/res/values-small-v4/values-small-v4.xml" qualifiers="small-v4"><dimen name="mtrl_alert_dialog_ba
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: c8613e3b1787c6a601cc08071f852607fdc9d8df4d39a61e660cc45aa52ae36b
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 10427
+Column: 128
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 7.0/res/values-large-v4/values-large-v4.xml" qualifiers="large-v4"><style name="Base.Theme.MaterialC
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 66fc0ef902a72dcacd8a566d5421e38c9a743482cac5fca7730c1937d0f79a86
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 10503
+Column: 4401
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 7.0/res/values-night-v8/values-night-v8.xml" qualifiers="night-v8"><style name="Theme.Material3.DayN
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: ebc8b8a65d9ba514ff1bb8c0e13c1aaca04fef44c42587efbea105a6a3c00c1c
+Details: (1/2) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+         
+(2/2) * Possible vulnerability detected: Remote code injection Apache Log4j
+Log4j versions prior to 2.17.1 are subject to a remote code execution vulnerability via the ldap JNDI parser, uncontrolled recursion from self-referential lookups and some other vulnerabilities. For more information checkout the CVE-2021-44228 (https://nvd.nist.gov/vuln/detail/CVE-2021-44228), CVE-2021-45046 (https://nvd.nist.gov/vuln/detail/CVE-2021-45046), CVE-2021-45105 (https://nvd.nist.gov/vuln/detail/CVE-2021-45105) and CVE-2021-44832 (https://nvd.nist.gov/vuln/detail/CVE-2021-44832) advisories.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 10786
+Column: 4531
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 5.3$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!th
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 46976f7c18fa61f0d72e04cb7159814d3055583e4ebe75f01d50c5338f886df9
+Details: (1/1) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: CRITICAL
+Line: 10813
+Column: 889
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: 8.4.105:8080</string></file><file name="mobile_navigation" path="/Users/kubaorluk/AndroidStudioProje
+RuleID: HS-JAVA-152
+Type: Vulnerability
+ReferenceHash: 438714f30ba9faab545741ae2889c7dfffce1fce898290f5c6c1e80018a02801
+Details: (1/1) * Possible vulnerability detected: Spring Framework Remote Code Execution
+It has been identified that versions prior to < 5.3.18 or < 5.2.20 of the spring framework are vulnerable to remote code execution. Please upgrade to version >= 5.3.18 or >= 5.2.20. For more information checkout the CVE-2022-22965 (https://tanzu.vmware.com/security/cve-2022-22965) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 73
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:styleable/AnimatedStateListDrawableTransition = 0x7f13000c
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: b12c8cda9b5d8d1159357d789187160a545b8b1f35fc81dc312b0fac52d33912
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 1082
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonSmallTertiaryStyle = 0x7f0301bf
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: c5a558d1f39f2eea3551c1938ce6fba2c7e03c7a2eb99791fd08d7931e29ff47
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 1393
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/motionEasingStandardAccelerateInterpolator = 0x7f030307
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: ced352d56bd57567bd643678803777d975dfa9d82413cc67f7fcfd72afa647c5
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 1534
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonLargeTertiaryStyle = 0x7f0301b8
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: cf087d7484662c36cf7e094bf7cbb52671370f71a848275cf40d242fe673ae63
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 1675
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonSmallPrimaryStyle = 0x7f0301bb
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 8347cfa023289ea4e3c169c7466273ac7ae4c74a135c73606b4d2e7fc10ce15c
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 1723
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/expandActivityOverflowButtonDrawable = 0x7f030191
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 49fcc8e0ce36f31507f29d0f26893b07e7da3bbf7f73d483075b4182a7fdeb82
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2293
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/extendedFloatingActionButtonTertiaryStyle = 0x7f0301a1
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 5ef64c110355c78de0140682a5d6dc83d820a5a1abf92b453ac6ce89a9eb416f
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2692
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/extendedFloatingActionButtonSecondaryStyle = 0x7f03019e
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 157de47cde8815be8b2183517143f2f9f75dede56c6a70aaba029f9e27333869
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 2790
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonSmallSecondaryStyle = 0x7f0301bc
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: ca929a72571cd87f490f4d9404600bbf3ac4f520304e63e51fbb0719ec0a475d
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3006
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/textInputFilledExposedDropdownMenuStyle = 0x7f030438
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 884327149852d9ba5667e0cd4f6ddedc89f77f1d96c83d8a31bf6cfa0fc6caac
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3250
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/motionEasingEmphasizedAccelerateInterpolator = 0x7f030301
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 27027d242ac5211e4f869a5995c573a7bdd419da9f949e2a1d8293d1174f02f5
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3354
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonLargePrimaryStyle = 0x7f0301b4
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: fb1d8c7ddf3279912cfa0d27ecd962027e93a24b0f9a82c629d833b29596f022
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3501
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/swipeRefreshLayoutProgressSpinnerBackgroundColor = 0x7f0303e2
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 983e2dd7983b222a5575a4626b7d219f6c5c93ecc8b42069511616ab127fdff8
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3600
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/motionEasingEmphasizedDecelerateInterpolator = 0x7f030302
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 34516f0182fee2e92601e45db41def37865c6e7f0a8b40d9fb9484adef1cffc8
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3697
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/materialCalendarHeaderConfirmButton = 0x7f0302b6
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 39e1998c7e9ba9d0d3b2f579dd9620ff0b6f6e1aedfd3d16ae8c4f4574f5757d
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3709
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/materialCalendarYearNavigationButton = 0x7f0302c0
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 2cbe6379743e8224dc65a81f002aff0fa3d84107c17a5bdfdc1999aac4e2976a
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3712
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/materialAlertDialogButtonSpacerVisibility = 0x7f0302aa
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 8fe1acac4d1b5a48dacda48a9189936863c6c94ce405772d663061ab1bc0e5ff
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 3760
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/listChoiceIndicatorMultipleAnimated = 0x7f030293
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 43483edc3d6209d879d4bbf7a6813df25d4d27741437d3dbd155112ffd5f652a
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4106
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonLargeSurfaceStyle = 0x7f0301b7
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 14e0abca26fbf9fbd9868b81b127ec4bf686a2de301183db865f7eb152263dc8
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4117
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonLargeSecondaryStyle = 0x7f0301b5
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 567f59d6903281a2a8f9c1954604501c0f8e2ffe4df5508609be95097581466d
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4290
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/floatingActionButtonSmallSurfaceStyle = 0x7f0301be
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 80b241571e83d16ccccb0b239ab250bb08133060d2fac7324118c2dee105006e
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4337
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/extendedFloatingActionButtonPrimaryStyle = 0x7f03019d
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: b59c03781132ce9527a9f79fd0183abf926a2fcf16069e47201fc2221d8ca56e
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4752
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/motionEasingStandardDecelerateInterpolator = 0x7f030308
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: b633b02fafe864460a659f45f6172810468a63d738e3c3e4daa225c75593debe
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4820
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/textInputOutlinedExposedDropdownMenuStyle = 0x7f03043c
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: d84a8d6830e4251c711c2291b5bc76fac454bd7ad4443b24b51e662033cd3499
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4908
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/materialCalendarMonthNavigationButton = 0x7f0302bd
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: ebe95877947aa7bbf826e5ae0033edf29bf8bf5727501d1888d58e7898a35014
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 4931
+Column: 4
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Code: com.github.pgleska:attr/extendedFloatingActionButtonSurfaceStyle = 0x7f0301a0
+RuleID: HS-LEAKS-8
+Type: Vulnerability
+ReferenceHash: 43b61d585457a6006b63af9eb79b58920f360b158f892da52b2842c6607f7140
+Details: (1/1) * Possible vulnerability detected: Github
+A GitHub access token was found. This pose a critical threat against your organization since it can give access not only to the platform itself and all the members of your (perhaps private) organization to feed more accurate spear phishing attacks but also to actual source code from your applications. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 8129
+Column: 1
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/merged_res/debug/values_values.arsc.flat
+Code: http://192.168.4.105:8080@%status_bar_notification_info_overflow2
+RuleID: HS-LEAKS-27
+Type: Vulnerability
+ReferenceHash: d84835a02d0cfb74c424adac82f281750ef264b1a0310c0969d66376b8e32d81
+Details: (1/1) * Possible vulnerability detected: Password found in a hardcoded URL
+A password was found in a hardcoded URL, this can lead to not only the leak of this password but also a failure point to some more sophisticated CSRF and SSRF attacks. Check CWE-352 (https://cwe.mitre.org/data/definitions/352.html) and CWE-918 (https://cwe.mitre.org/data/definitions/918.html) for more details.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 23
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/adapters/MessagesAdapter.java
+Code: import javax.crypto.BadPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: b4e35021358c9bb435d367d8e90bc129ba69be7ad69f15bb305f8ad8f35d2486
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 24
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/adapters/MessagesAdapter.java
+Code: import javax.crypto.IllegalBlockSizeException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 5a8aba0e16883a938b21253440800e916a39623653a9516c210d2f9a4c1e1efe
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 25
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/adapters/MessagesAdapter.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 46d89566e68d2ffc71d3de2da002104f51dd67e527508c346260a1b7a2330f52
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 21
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.BadPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 6e2c5f9c54461ea14ee819834700896f6fe7fedf95b175455b57f3d3b423e6fd
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 22
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.Cipher;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: ef435b7c2921055d6a9c902dd38f57dc627021f66879072aec483695c1c18591
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 23
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.IllegalBlockSizeException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 84df57c06d8ed80dbbf18f58355dc29ee3720eb5d0d1098071c078611b25acc7
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 24
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.KeyGenerator;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 01a2f6f1f057ac365285d06e3e9b76895bc87aa38c6fa6715984f070af35480f
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 25
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 22a8de7ed6767cb3d6121913ec8619b49b88b7400d843de1ba53e2570723d6ce
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 26
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 99dec6552d541138424c5c6b2750a43e21913c470e6442d9b39a1c937204fe53
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 27
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.SecretKeyFactory;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 664795aeb7f8fd54fbb573f134f5c0f881744237394d858c93ea3f810a5c796d
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 28
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.spec.IvParameterSpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 26ffe8d39c22c6db2ed8bed1710b2cf9cefd4db1e45361d200e11b8b795258d0
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 29
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: import javax.crypto.spec.SecretKeySpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 64f2de2edcf37b1420f2b9372e982d3948919e6bf7b0387b646236f78a459f6d
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 31
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/PinFragment.java
+Code: import javax.crypto.BadPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: d45a79137eab07221871597822771cfbe1de30911db1a19e623113f2156773c0
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 32
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/PinFragment.java
+Code: import javax.crypto.IllegalBlockSizeException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 48720bfd0488b7e25a9f338332b074d0540521ed9e354a16237cb5f17e397b58
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 33
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/PinFragment.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 508eed25aa233ae7d5cac86b1e08334ce3e4ac9e21abd908d0bc299e07837d23
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 34
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/PinFragment.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 8631365e1ed8fb41313b1bccf405b562d9115c11d91efd2c74def1f4c60774ab
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 41
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java
+Code: import javax.crypto.BadPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: a717471a676a15d9fe8107e4ff4e4cdc3044e9b1c7cafd28f0333a55538b3e6d
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 42
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java
+Code: import javax.crypto.IllegalBlockSizeException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 6e64ad30a0a2c53bfa2d07dd477f9df55754ca987efe77b2e41505f9b98bdeb7
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 43
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 75ca58359502a172dee9f85efc7c95007b884038966cd83cff3b1b00e44e7f0d
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 44
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/conversations/MessagesFragment.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 2cc430b3865594b1b3b6ca141a62751d1916264ec29731d9f6df5f72f1b20f47
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 38
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java
+Code: import javax.crypto.BadPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 3229f49ee746a1b57146f4161f4db6c414a3386b382a547d35f78789de9d33ec
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 39
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java
+Code: import javax.crypto.IllegalBlockSizeException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 25684d4b8ce1d19728ce95656d5c790a0494f078dad0db977d063722ca7707d8
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 40
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 534f7e00b3ef83b1b64461c8d5f650b4549c9c43cce14b7689369041bb485db0
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 41
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 014043c86c72fc85e2b07dbcdeffecf36225cab2b9f6834a51d4f45da9ec4555
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 11
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/viewModels/UniversalViewModel.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 769e7a274a75e547635e180586136310859483af933f709c780e6d0b730c3125
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 483
+Column: 33
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml
+Code: <attr format="boolean" name="selectionRequired"/>
+RuleID: HS-JAVA-134
+Type: Vulnerability
+ReferenceHash: 0bcfba8c866bbae5abc1cd805b59223cb85b1642b2271156bc3a8e1a233b438e
+Details: (1/1) * Possible vulnerability detected: SQL Injection
+The input values included in SQL queries need to be passed in safely. Bind variables in prepared statements can be used to easily mitigate the risk of SQL injection. Alternatively to prepare statements, each parameter can be escaped manually. For more information checkout the CWE-89 (https://cwe.mitre.org/data/definitions/89.html) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 439
+Column: 20
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+Code: <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
+RuleID: HS-JAVA-134
+Type: Vulnerability
+ReferenceHash: 8dc1323beb04516aef5457bf010dbd5a2d713c1e0a02bf0f72a6104584f805f2
+Details: (1/1) * Possible vulnerability detected: SQL Injection
+The input values included in SQL queries need to be passed in safely. Bind variables in prepared statements can be used to easily mitigate the risk of SQL injection. Alternatively to prepare statements, each parameter can be escaped manually. For more information checkout the CWE-89 (https://cwe.mitre.org/data/definitions/89.html) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 46
+Column: 16
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: .encodeToString(cipherText);
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: 4f4036c579a99de25096e04040cb840a22c83986ff41ebf4361e313bbc0b6abe
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 90
+Column: 50
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: String privateString = Base64.getEncoder().encodeToString(privateKey.getEncoded());
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: 1d5b14591d7d5f9749f2dee535b329f6652fc9abba5ac20423a1257d47cdd63f
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 91
+Column: 49
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: String publicString = Base64.getEncoder().encodeToString(publicKey.getEncoded());
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: dac0de8c4cce798d582216de2915c2d3883dfc7a8e80a3ffb898fb8a285cc604
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 123
+Column: 57
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/ui/register/RegisterFragment.java
+Code: String publicKeyEncoded = Base64.getEncoder().encodeToString(publicKey.getEncoded());
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: b444f1654508e4b9d99046df070639e21f728675409f007b6a8d14c2358ad501
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 56
+Column: 16
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: .decode(cipherText));
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: 86dfb7bf292397b2098c79a79a16560e89e83e2e2af6ce7434e92f2486ceeea3
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 67
+Column: 81
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(Base64.getDecoder().decode(keyString));
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: 6c6f393fb5244d1606c59821225c04a910e9a5af09f19a29c6d8eb5fffb412f9
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 73
+Column: 81
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(Base64.getDecoder().decode(keyString));
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: c1ecfa6e706ae9d904250ddd5899a74bb670a281d6da9300047f70ee20334246
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 78
+Column: 47
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-client/app/src/main/java/com/github/pgleska/cryptography/CryptographyUtils.java
+Code: byte[] decodedKey = Base64.getDecoder().decode(encodedKey);
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: 52f48a57da75658fee825fc6880913ce4c23632f3188bcf543f4f06afa90bfd1
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+In this analysis, a total of 93 possible vulnerabilities were found and we classified them into:
+Total of Vulnerability HIGH is: 27
+Total of Vulnerability MEDIUM is: 4
+Total of Vulnerability LOW is: 4
+Total of Vulnerability CRITICAL is: 58
+
+==================================================================================

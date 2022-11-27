@@ -1,0 +1,72 @@
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-backend//cdk_report_result.txt
+#############################################
+
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-backend//cdk_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-backend//git_report_result.txt
+#############################################
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-backend//git_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /Users/kubaorluk/AndroidStudioProjects/MediConv-backend//yaml_report_result.txt
+#############################################
+
+       _               _              
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V / 
+  \___|_| |_|\___|\___|_|\_\___/ \_/  
+                                      
+By bridgecrew.io | version: 2.2.93 
+
+dockerfile scan results:
+
+Passed checks: 2, Failed checks: 2, Skipped checks: 0
+
+Check: CKV_DOCKER_7: "Ensure the base image uses a non latest version tag"
+	PASSED for resource: /docker/backend/Dockerfile.
+	File: /docker/backend/Dockerfile:1-3
+	Guide: https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag
+Check: CKV_DOCKER_11: "Ensure From Alias are unique for multistage builds."
+	PASSED for resource: /docker/backend/Dockerfile.
+	File: /docker/backend/Dockerfile:1-3
+	Guide: https://docs.bridgecrew.io/docs/ensure-docker-from-alias-is-unique-for-multistage-builds
+Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
+	FAILED for resource: /docker/backend/Dockerfile.
+	File: /docker/backend/Dockerfile:1-3
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images
+
+		1 | FROM adoptopenjdk:11-jre-openj9
+		2 | 
+		3 | ENTRYPOINT exec java $JAVA_OPTS -jar /opt/mediconv/MediConv.jar
+Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
+	FAILED for resource: /docker/backend/Dockerfile.
+	File: /docker/backend/Dockerfile:1-3
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created
+
+		1 | FROM adoptopenjdk:11-jre-openj9
+		2 | 
+		3 | ENTRYPOINT exec java $JAVA_OPTS -jar /opt/mediconv/MediConv.jar
+
+------------------------------------------------------------
+./docker-compose.yaml
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+#############################################
+End of  /Users/kubaorluk/AndroidStudioProjects/MediConv-backend//yaml_report_result.txt
+#############################################
+
+

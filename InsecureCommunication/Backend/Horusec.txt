@@ -1,0 +1,50 @@
+==================================================================================
+
+HORUSEC ENDED THE ANALYSIS WITH STATUS OF "success" AND WITH THE FOLLOWING RESULTS:
+
+==================================================================================
+
+Analysis StartedAt: 2022-11-24 16:11:36
+Analysis FinishedAt: 2022-11-24 16:11:52
+
+==================================================================================
+
+Language: Generic
+Severity: HIGH
+Line: 0
+Column: 0
+SecurityTool: Trivy
+Confidence: MEDIUM
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-backend/docker/backend/Dockerfile
+Code: root user
+Type: Vulnerability
+ReferenceHash: 9df07695c78134b6aaa7a9749a7e3c098fe63c5ea545dac27f7d4663a6d75508
+Details: (1/1) * Possible vulnerability detected: MissConfiguration
+      Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.
+      Message: Specify at least 1 USER command in Dockerfile with non-root user as argument
+      Resolution: Add 'USER <non root user name>' line to the Dockerfile
+      References: [https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ https://avd.aquasec.com/appshield/ds002]
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 83
+Column: 26
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /Users/kubaorluk/AndroidStudioProjects/MediConv-backend/src/main/java/com/github/pgleska/MediConv/dtos/UserDTO.java
+Code: user.setPassword(encoder.encode(userDTO.getPassword()));
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: 873e19010ca939b17bd0e6113e34fa6786cda599ceacef0b2e0dea7674b1d17b
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+In this analysis, a total of 2 possible vulnerabilities were found and we classified them into:
+Total of Vulnerability HIGH is: 1
+Total of Vulnerability MEDIUM is: 1
+
+==================================================================================

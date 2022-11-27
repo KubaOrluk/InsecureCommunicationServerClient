@@ -1,0 +1,9 @@
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+2:30PM INF 10 commits scanned.
+2:30PM INF scan completed in 79.6ms
+2:30PM INF no leaks found

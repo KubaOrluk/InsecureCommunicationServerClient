@@ -1,0 +1,240 @@
+finding,kind,what,where,cwe,stream,title,description,snippet,method
+F418,lines,MediConv-backend/docker-compose.yaml,3,16,skims,418. Insecure service configuration - Docker,Property read_only is either missing or misconfigured in MediConv-backend/docker-compose.yaml,"
+   1 | version: '3'
+   2 | services:
+>  3 |   db:
+   4 |     image: mysql:latest
+   5 |     restart: always
+   6 |     hostname: mediconv-db
+   7 |     container_name: mediconv-db
+   8 |     volumes:
+   9 |       - ./docker/db/mediconv.sql:/docker-entrypoint-initdb.d/mediconv.sql:ro
+  10 |       - ./docker/db/dump/:/opt/dump/
+  11 |     environment:
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+     ^ Col 0
+",docker.docker_compose_read_only
+F418,lines,MediConv-backend/docker-compose.yaml,22,16,skims,418. Insecure service configuration - Docker,Property read_only is either missing or misconfigured in MediConv-backend/docker-compose.yaml,"
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+> 22 |   backend:
+  23 |     build: ./docker/backend
+  24 |     restart: always
+  25 |     hostname: mediconv-backend
+  26 |     container_name: mediconv-backend
+  27 |     volumes:
+  28 |       - ./docker/backend/MediConv.jar:/opt/mediconv/MediConv.jar:ro
+  29 |     ports:
+  30 |       - 8001:8001
+  31 |       - 8080:8080
+  32 |       - 8019:8001
+     ^ Col 0
+",docker.docker_compose_read_only
+F266,lines,MediConv-backend/docker/backend/Dockerfile,0,250,skims,266. Excessive Privileges - Docker,No command found to create a group or user, make sure the container is running as non-root"
+ in MediConv-backend/docker/backend/Dockerfile","
+  1 | FROM adoptopenjdk:11-jre-openj9
+  2 |
+  3 | ENTRYPOINT exec java $JAVA_OPTS -jar /opt/mediconv/MediConv.jar
+    ^ Col 0
+",docker.container_without_user
+F266,lines,MediConv-backend/docker-compose.yaml,3,250,skims,266. Excessive Privileges - Docker,Property user is either missing or misconfigured in MediConv-backend/docker-compose.yaml,"
+   1 | version: '3'
+   2 | services:
+>  3 |   db:
+   4 |     image: mysql:latest
+   5 |     restart: always
+   6 |     hostname: mediconv-db
+   7 |     container_name: mediconv-db
+   8 |     volumes:
+   9 |       - ./docker/db/mediconv.sql:/docker-entrypoint-initdb.d/mediconv.sql:ro
+  10 |       - ./docker/db/dump/:/opt/dump/
+  11 |     environment:
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+     ^ Col 0
+",docker.docker_compose_without_user
+F266,lines,MediConv-backend/docker-compose.yaml,22,250,skims,266. Excessive Privileges - Docker,Property user is either missing or misconfigured in MediConv-backend/docker-compose.yaml,"
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+> 22 |   backend:
+  23 |     build: ./docker/backend
+  24 |     restart: always
+  25 |     hostname: mediconv-backend
+  26 |     container_name: mediconv-backend
+  27 |     volumes:
+  28 |       - ./docker/backend/MediConv.jar:/opt/mediconv/MediConv.jar:ro
+  29 |     ports:
+  30 |       - 8001:8001
+  31 |       - 8080:8080
+  32 |       - 8019:8001
+     ^ Col 0
+",docker.docker_compose_without_user
+F007,lines,MediConv-backend/src/main/java/com/github/pgleska/MediConv/security/APISecurityConfig.java,48,352,skims,007. Cross-site request forgery,Disabling of protection mechanism against CSRF attacks in MediConv-backend/src/main/java/com/github/pgleska/MediConv/security/APISecurityConfig.java,"
+  38 |   return http.getSharedObject(AuthenticationManagerBuilder.class)
+  39 |     .userDetailsService(userDetailsService)
+  40 |     .passwordEncoder(bCryptPasswordEncoder())
+  41 |     .and()
+  42 |     .build()
+  43 |  }
+  44 |
+  45 |  @Bean
+  46 |  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+  47 |
+> 48 |   http.csrf().disable()
+  49 |    .authorizeHttpRequests()
+  50 |    .antMatchers(HttpMethod.POST, ""/login"", ""/api/user/register"").permitAll()
+  51 |    .antMatchers(""/api/**"").hasAnyAuthority(""USER"", ""ADMIN"", ""DOCTOR"")
+  52 |    .and()
+  53 |    .addFilter(new JWTAuthenticationFilter(authenticationManager(http, userDetailsService)))
+  54 |    .addFilterBefore(new JWTAuthorizationFilter(), BasicAuthenticationFilter.class)
+  55 |    .sessionManagement()
+  56 |    .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+  57 |
+  58 |   return http.build()
+     ^ Col 0
+",java.csrf_protections_disabled
+F380,lines,MediConv-backend/docker/backend/Dockerfile,1,749,skims,380. Supply Chain Attack - Docker,Docker dependencies are not pinned to an exact digest, making the Docker build unable the verify the integrity of the image and allowing a malicious actor to override the used components with malicious components without leaving a trace."
+ in MediConv-backend/docker/backend/Dockerfile","
+> 1 | FROM adoptopenjdk:11-jre-openj9
+  2 |
+  3 | ENTRYPOINT exec java $JAVA_OPTS -jar /opt/mediconv/MediConv.jar
+    ^ Col 0
+",docker.unpinned_docker_image
+F380,lines,MediConv-backend/docker-compose.yaml,4,749,skims,380. Supply Chain Attack - Docker,Ensure the specified container image has a digest. in MediConv-backend/docker-compose.yaml,"
+   1 | version: '3'
+   2 | services:
+   3 |   db:
+>  4 |     image: mysql:latest
+   5 |     restart: always
+   6 |     hostname: mediconv-db
+   7 |     container_name: mediconv-db
+   8 |     volumes:
+   9 |       - ./docker/db/mediconv.sql:/docker-entrypoint-initdb.d/mediconv.sql:ro
+  10 |       - ./docker/db/dump/:/opt/dump/
+  11 |     environment:
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+     ^ Col 0
+",docker.docker_compose_image_has_digest
+F009,lines,MediConv-backend/docker-compose.yaml,12,798,skims,009. Sensitive information in source code,Environmental variables may have sensitive values in plain-text in MediConv-backend/docker-compose.yaml,"
+   2 | services:
+   3 |   db:
+   4 |     image: mysql:latest
+   5 |     restart: always
+   6 |     hostname: mediconv-db
+   7 |     container_name: mediconv-db
+   8 |     volumes:
+   9 |       - ./docker/db/mediconv.sql:/docker-entrypoint-initdb.d/mediconv.sql:ro
+  10 |       - ./docker/db/dump/:/opt/dump/
+  11 |     environment:
+> 12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+  22 |   backend:
+     ^ Col 0
+",docker.docker_compose_env_secrets
+F009,lines,MediConv-backend/docker-compose.yaml,15,798,skims,009. Sensitive information in source code,Environmental variables may have sensitive values in plain-text in MediConv-backend/docker-compose.yaml,"
+   5 |     restart: always
+   6 |     hostname: mediconv-db
+   7 |     container_name: mediconv-db
+   8 |     volumes:
+   9 |       - ./docker/db/mediconv.sql:/docker-entrypoint-initdb.d/mediconv.sql:ro
+  10 |       - ./docker/db/dump/:/opt/dump/
+  11 |     environment:
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+> 15 |       - MYSQL_USER=mediconv
+  16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+  22 |   backend:
+  23 |     build: ./docker/backend
+  24 |     restart: always
+  25 |     hostname: mediconv-backend
+     ^ Col 0
+",docker.docker_compose_env_secrets
+F009,lines,MediConv-backend/docker-compose.yaml,16,798,skims,009. Sensitive information in source code,Environmental variables may have sensitive values in plain-text in MediConv-backend/docker-compose.yaml,"
+   6 |     hostname: mediconv-db
+   7 |     container_name: mediconv-db
+   8 |     volumes:
+   9 |       - ./docker/db/mediconv.sql:/docker-entrypoint-initdb.d/mediconv.sql:ro
+  10 |       - ./docker/db/dump/:/opt/dump/
+  11 |     environment:
+  12 |       - MYSQL_ROOT_PASSWORD=mysecretpassword
+  13 |       - MYSQL_DATABASE=mediconv
+  14 |       - MYSQL_ADMIN=admin
+  15 |       - MYSQL_USER=mediconv
+> 16 |       - MYSQL_PASSWORD=mysecretpassword
+  17 |     networks:
+  18 |       - mediconv
+  19 | #    ports:
+  20 | #     - 3306:3306
+  21 |
+  22 |   backend:
+  23 |     build: ./docker/backend
+  24 |     restart: always
+  25 |     hostname: mediconv-backend
+  26 |     container_name: mediconv-backend
+     ^ Col 0
+",docker.docker_compose_env_secrets
+F009,lines,MediConv-backend/src/main/resources/application.properties,3,798,skims,009. Sensitive information in source code,Sensitive information in MediConv-backend/src/main/resources/application.properties,"
+  1 | spring.datasource.url=jdbc:mysql://mediconv-db:3306/mediconv?allowPublicKeyRetrieval=true&useSSL=false
+  2 | spring.datasource.username=mediconv
+> 3 | spring.datasource.password=mysecretpassword
+  4 |
+  5 | spring.main.allow-bean-definition-overriding=true
+    ^ Col 0
+",java.java_properties_sensitive_data
+"

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+		</style>
+   </head>
+   <body>
+      <h1>SpotBugs Report</h1>
+      <p>Produced using <a href="https://spotbugs.github.io">SpotBugs</a>4.4.2.</p>
+      <p>Project: 
+			MediConv[MediConv.main]</p>
+      <h2>Metrics</h2>
+      <p>548 lines of code analyzed,
+	in 22 classes, 
+	in 7 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">1</td>
+            <td align="right">1.82</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">1</td>
+            <td align="right">1.82</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>2</b>
+            </td>
+            <td align="right">
+               <b>3.65</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Summary</h2>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_SECURITY">Security Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>2</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>Warnings</h1>
+      <p>Click on each warning link to see a full description of the issue, and
+	    details of how to resolve it.</p>
+      <h2>
+         <a name="Warnings_SECURITY">Security Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SPRING_CSRF_PROTECTION_DISABLED">Spring CSRF protection disabled</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Disabling Spring Security's CSRF protection is unsafe for standard web applications<br/>
+                  <br/>
+                  <br/>In file APISecurityConfig.java,
+					
+						line 48<br/>In class com.github.pgleska.MediConv.security.APISecurityConfig<br/>In method com.github.pgleska.MediConv.security.APISecurityConfig.filterChain(HttpSecurity)<br/>At APISecurityConfig.java:[line 48]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#XSS_SERVLET">Potential XSS in Servlet</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>This use of java/io/PrintWriter.write(Ljava/lang/String;)V could be vulnerable to XSS in the Servlet<br/>
+                  <br/>
+                  <br/>In file JWTAuthenticationFilter.java,
+					
+						line 71<br/>In class com.github.pgleska.MediConv.security.JWTAuthenticationFilter<br/>In method com.github.pgleska.MediConv.security.JWTAuthenticationFilter.successfulAuthentication(HttpServletRequest, HttpServletResponse, FilterChain, Authentication)<br/>At JWTAuthenticationFilter.java:[line 71]<br/>Sink method java/io/PrintWriter.write(Ljava/lang/String;)V<br/>Sink parameter 0</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>
+         <a name="Details">Warning Types</a>
+      </h1>
+      <h2>
+         <a name="SPRING_CSRF_PROTECTION_DISABLED">Spring CSRF protection disabled</a>
+      </h2>
+            
+<p>Disabling Spring Security's CSRF protection is unsafe for standard web applications.</p>
+<p>A valid use case for disabling this protection would be a service exposing state-changing operations
+that is guaranteed to be used only by non-browser clients.</p>
+<p>
+    <b>Insecure configuration:</b><br/>
+<pre>@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
+    }
+}</pre>
+</p>
+<p>
+<b>References</b><br/>
+<a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/csrf.html#when-to-use-csrf-protection">Spring Security Official Documentation: When to use CSRF protection</a><br/>
+<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">OWASP: Cross-Site Request Forgery</a><br/>
+<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet">OWASP: CSRF Prevention Cheat Sheet</a><br/>
+<a href="https://cwe.mitre.org/data/definitions/352.html">CWE-352: Cross-Site Request Forgery (CSRF)</a>
+</p>
+
+        <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="XSS_SERVLET">Potential XSS in Servlet</a>
+      </h2>
+            
+<p>
+A potential XSS was found. It could be used to execute unwanted JavaScript in a client's browser. (See references)
+</p>
+<p>
+    <b>Vulnerable Code:</b>
+<pre>protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    String input1 = req.getParameter("input1");
+    [...]
+    resp.getWriter().write(input1);
+}</pre>
+</p>
+<p>
+    <b>Solution:</b>
+<pre>protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    String input1 = req.getParameter("input1");
+    [...]
+    resp.getWriter().write(Encode.forHtml(input1));
+}</pre>
+</p>
+<p>
+The best defense against XSS is context sensitive output encoding like the example above. There are typically 4 contexts to consider:
+HTML, JavaScript, CSS (styles), and URLs. Please follow the XSS protection rules defined in the OWASP XSS Prevention Cheat Sheet,
+which explains these defenses in significant detail.
+</p>
+<p>Note that this XSS in Servlet rule looks for similar issues, but looks for them in a different way than the existing
+'XSS: Servlet reflected cross site scripting vulnerability' and 'XSS: Servlet reflected cross site scripting vulnerability in error page' rules in FindBugs.
+</p>
+<br/>
+<p>
+<b>References</b><br/>
+<a href="http://projects.webappsec.org/w/page/13246920/Cross%20Site%20Scripting">WASC-8: Cross Site Scripting</a><br/>
+<a href="https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet">OWASP: XSS Prevention Cheat Sheet</a><br/>
+<a href="https://www.owasp.org/index.php/Top_10_2013-A3-Cross-Site_Scripting_%28XSS%29">OWASP: Top 10 2013-A3: Cross-Site Scripting (XSS)</a><br/>
+<a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')</a><br/>
+<a href="https://code.google.com/p/owasp-java-encoder/">OWASP Java Encoder</a><br/>
+</p>
+            
+        <p>
+         <br/>
+         <br/>
+      </p>
+   </body>
+</html>

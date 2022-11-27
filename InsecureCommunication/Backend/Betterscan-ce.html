@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Report</title>
+  <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.0.js'></script>
+
+  <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <link href="https://dl.betterscan.io/assets/css/reportstyle.css" rel="stylesheet">
+
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+var data =
+[
+    {
+        "hash": "6d261d2fdeb54f82678a9c202003b5c5",
+        "description": "GenericAPIKey",
+        "severity": "Warning",
+        "file": "docker-compose.yaml",
+        "line": 41
+    },
+    {
+        "hash": "5029fef9c2349277a1c9dbccf9803411",
+        "description": "Cryptographic keys should not be kept in the source code. The source code can be widely shared\nin an enterprise environment, and is certainly shared in open source. To be managed safely,\npasswords and secret keys should be stored in separate configuration files or keystores.\n",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/security/SECURITY_CONSTANTS.java",
+        "line": 4
+    },
+    {
+        "hash": "c280ab9b2ba8b7f7b2c4ba8a5443ef33",
+        "description": "Found a Spring RestController\nMake sure you are not vulnerable or have the possible mitigations\nhttps://www.praetorian.com/blog/spring-core-jdk9-rce/\n",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/controllers/MessageController.java",
+        "line": 14
+    },
+    {
+        "hash": "539a3173e512afe8239a78365789abca",
+        "description": "The utility class name 'SECURITY_CONSTANTS' doesn't match '[A-Z][a-zA-Z0-9]*'",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/security/SECURITY_CONSTANTS.java",
+        "line": 3
+    },
+    {
+        "hash": "aef72f45bfdeeb83830a535d1eb78f3b",
+        "description": "Package name contains upper case characters",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/MediConvApplication.java",
+        "line": 1
+    },
+    {
+        "hash": "6e2e5a94d93c22934ac69cbf9352b478",
+        "description": "All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/MediConvApplication.java",
+        "line": 9
+    },
+    {
+        "hash": "6df31a18eb1a812efb3f115d04d97dfc",
+        "description": "Avoid the use of value in annotations when its the only element",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/controllers/UserController.java",
+        "line": 49
+    },
+    {
+        "hash": "d2beefae606ff5c2768eb590a19c9fdb",
+        "description": "Unused import 'java.util.Optional'",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/services/UserDetailsServiceImpl.java",
+        "line": 5
+    },
+    {
+        "hash": "609d2b9b4a2ceb08a2ea9bcb89d432d3",
+        "description": "Unused import 'org.springframework.data.jpa.repository.config.EnableJpaRepositories'",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/MediConvApplication.java",
+        "line": 5
+    },
+    {
+        "hash": "9c0895c047ffa7b48672515bc95f08f7",
+        "description": "Avoid unused method parameters such as 'request'.",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/security/JWTAuthorizationFilter.java",
+        "line": 43
+    },
+    {
+        "hash": "3db5b8eb18aa4bc48cc08030598168f1",
+        "description": "Unused import 'com.github.pgleska.MediConv.entities.User'",
+        "severity": "Warning",
+        "file": "src/main/java/com/github/pgleska/MediConv/controllers/UserController.java",
+        "line": 8
+    },
+    {
+        "hash": "9a3e13f10714cd530b232c247a6e0b38",
+        "description": "Ensure that HEALTHCHECK instructions have been added to container images",
+        "severity": "Warning",
+        "file": "docker/backend/Dockerfile",
+        "line": 1
+    },
+    {
+        "hash": "678d58dca357b79eb1c8af35e82502a0",
+        "description": "Ensure that a user for the container has been created",
+        "severity": "Warning",
+        "file": "docker/backend/Dockerfile",
+        "line": 1
+    }
+]
+var sort_by = function(field, reverse, primer){
+
+   var key = primer ?
+       function(x) {return primer(x[field])} :
+       function(x) {return x[field]};
+
+   reverse = !reverse ? 1 : -1;
+
+   return function (a, b) {
+       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+     }
+}
+
+for(var i = 0; i < data.length; i++) {
+
+    if(data[i].risk=="Information")
+    {
+        data[i].risk_no=1;
+    }
+
+    if(data[i].risk=="Low")
+    {
+        data[i].risk_no=2;
+    }
+
+    if(data[i].risk=="Medium")
+    {
+        data[i].risk_no=3;
+    }
+
+    if(data[i].risk=="High")
+    {
+        data[i].risk_no=4;
+    }
+
+
+
+
+
+}
+
+data.sort(sort_by('risk_no', true, parseInt));
+
+
+
+for(var i = 0; i < data.length; i++) {
+$('#findings').append("<tbody><tr><th>File</th><td>"+data[i].file+"</td></tr>");
+$('#findings').append("<tr><th>Description</th><td>"+data[i].description+"</td></tr>");
+$('#findings').append("<tr><th>Severity</th><td>Warning</td></tr>");
+$('#findings').append("<tr><th>Line</th><td>"+data[i].line+"</td></tr></tbody></table>");
+$('#hr').append("<hr>");
+
+}
+
+
+});//]]>
+
+</script>
+
+
+</head>
+
+ <div class="container-fluid">
+
+
+
+
+<p style="margin-bottom: 25px;"><img src="https://dl.betterscan.io/wp-content/uploads/2022/05/logo-nobackground-164x32-1.png" style="position:relative; top:-40px;"></p>
+
+<div class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#overview" data-toggle="tab">Summary</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="overview">
+
+
+<div class="alert alert-info">
+    <b>Tags</b>:
+
+        Security Final Report
+
+
+</div>
+
+<section id="information">
+    <div class="box">
+        <h4>Report</h4>
+        <div class="box-content" style="padding: 0;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="border-top: 0;">Type</th>
+
+                         <td style="border-top: 0;">FILE</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+</section>
+<hr>
+
+    <section id="file">
+    <h4>File Details</h4>
+    <div class="box">
+        <div class="box-content" style="padding: 0;">
+            <table class="table">
+                <tbody><tr>
+                    <th style="border-top: 0;">File Name</th>
+                    <td style="border-top: 0;">report.html</td>
+                </tr>
+                <tr>
+                    <th>File Type</th>
+                    <td>data</td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+</section>
+
+
+
+  <div align="center"><h1>Scan Report</h1></div>
+
+
+<hr>
+  <h4>Code</h4>
+
+ <section id="findings1">
+    <div class="box">
+
+        <div id="findings" class="box-content" style="padding: 0;">
+        </div>
+    </div>
+</section>
+
+</div>
+
+</body>
+
+
+</html>
+
+
